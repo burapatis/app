@@ -127,6 +127,6 @@ apps/
 
 ## 📄 License
 
-© 2025 Boorapatis Ploysuwan. All Rights Reserved.  
+© 2026 Boorapatis Ploysuwan. All Rights Reserved.  
 โค้ดในโปรเจกต์นี้ใช้สำหรับเว็บไซต์ของผู้พัฒนาเท่านั้น
 # app
