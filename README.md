@@ -56,7 +56,7 @@ https://<your-username>.github.io/<your-repo-name>/
 
 | จุด | ต้องแก้เป็น | ไฟล์ที่เกี่ยวข้อง |
 |-----|------------|------------------|
-| URL เว็บ GitHub Pages | `https://yourusername.github.io/yourrepo` | `index.html` หลัก |
+| URL เว็บ GitHub Pages | `https://burapatis.github.io/app` | `index.html` หลัก |
 | อีเมลติดต่อ | อีเมลจริงของคุณ | ทุกไฟล์ |
 | ลิงก์ App Store iOS | URL หน้าแอปใน App Store | `apps/*/index.html` |
 | ลิงก์ Google Play | URL หน้าแอปใน Google Play | `apps/*/index.html` |

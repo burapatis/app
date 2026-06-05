@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ [แก้ไข] ชื่อเว็บในแท็บเบราว์เซอร์ -->
+  <title>Boorapatis Ploysuwan — นักพัฒนาแอปพลิเคชัน</title>
+
+  <!-- ✏️ [แก้ไข] คำอธิบายเว็บ (ปรากฏใน Google/SEO) -->
+  <meta name="description" content="Boorapatis Ploysuwan — นักพัฒนาแอปพลิเคชันมือถือที่เน้นความปลอดภัย ใช้งานง่าย สอดคล้องกับชีวิตประจำวันคนไทย" />
+
+  <!-- ✏️ [แก้ไข] คำค้นหา SEO -->
+  <meta name="keywords" content="แอปบัญชี, บัญชีรายรับรายจ่าย, แอปร้านค้า, ขายดี, บัญชีวิถีไทย, Thai app, mobile app" />
+  <meta name="author" content="Boorapatis Ploysuwan" />
+
+  <!-- Open Graph (สำหรับแชร์ใน Social Media) -->
+  <!-- ✏️ [แก้ไข] URL เว็บของคุณ เช่น https://burapatis.github.io/app -->
+  <meta property="og:url"         content="https://burapatis.github.io/app" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Boorapatis Ploysuwan — นักพัฒนาแอปพลิเคชัน" />
+  <meta property="og:description" content="แอปพลิเคชันที่ปลอดภัย ใช้ง่าย และสอดคล้องกับวิถีชีวิตคนไทย" />
+  <!-- ✏️ [แก้ไข] URL รูปภาพ OG (ขนาดแนะนำ 1200x630 px) -->
+  <meta property="og:image"       content="https://burapatis.github.io/app/assets/og-image.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+
+  <!-- ✏️ [แก้ไข] Favicon — วาง favicon.ico ไว้ในโฟลเดอร์ root -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+
+  <style>
+    /* ========================================================
+       สไตล์เฉพาะหน้าแรก (index.html)
+       ======================================================== */
+
+    /* Hero Section */
+    .main-hero {
+      padding: 140px 0 120px;
+      background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1C3D5A 80%, #1d5578 100%);
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    .main-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,148,26,0.08) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Thai decorative element */
+    .hero-deco {
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 440px;
+      height: 440px;
+      opacity: 0.04;
+      border-radius: 50%;
+      border: 40px solid #C9941A;
+    }
+
+    .hero-deco-2 {
+      position: absolute;
+      left: -100px;
+      bottom: -80px;
+      width: 360px;
+      height: 360px;
+      opacity: 0.03;
+      border-radius: 50%;
+      border: 30px solid #C9941A;
+    }
+
+    .main-hero-content { position: relative; z-index: 1; }
+
+    .dev-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin: 0 auto 24px;
+      box-shadow: 0 0 0 5px rgba(201,148,26,0.25), 0 0 0 10px rgba(201,148,26,0.10);
+    }
+
+    .hero-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+
+    .main-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .main-hero h1 em {
+      font-style: normal;
+      color: var(--accent-light);
+    }
+
+    .main-hero .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.18rem);
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.9;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-chip {
+      padding: 6px 16px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 99px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      fill: var(--bg);
+    }
+
+    /* Apps Section */
+    .apps-section {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+
+    .app-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .app-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .app-card-header {
+      padding: 28px 28px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-card-body { padding: 20px 28px; flex: 1; }
+    .app-card-footer { padding: 16px 28px 24px; }
+
+    .app-card-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .app-card-tagline {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .app-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .app-features li {
+      font-size: 14px;
+      color: var(--text-body);
+      padding: 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.6;
+    }
+
+    .app-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .app-card-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Coming Soon Card */
+    .app-card.coming-soon {
+      background: linear-gradient(135deg, #f8f7f4, #f1ede4);
+      border-style: dashed;
+    }
+
+    .app-card.coming-soon .app-card-header {
+      border-bottom-color: rgba(0,0,0,0.06);
+    }
+
+    /* Values Section */
+    .values-section {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      padding: 90px 0;
+      color: #fff;
+    }
+
+    .value-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: background var(--transition);
+    }
+
+    .value-card:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .value-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(201,148,26,0.20);
+      border: 1px solid rgba(201,148,26,0.35);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .value-card h3 { color: #fff; font-size: 1.05rem; margin-bottom: 8px; }
+    .value-card p  { color: rgba(255,255,255,0.70); font-size: 14px; line-height: 1.75; margin: 0; }
+
+    /* About Section */
+    .about-section { background: var(--bg-white); padding: 90px 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, #e8eef5, #d4e0ec);
+      border-radius: var(--radius);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      border: 1px solid var(--border);
+    }
+
+    .about-content .lead {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .skill-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-body);
+    }
+
+    .skill-chip .icon { font-size: 18px; }
+
+    /* CTA Banner */
+    .cta-section {
+      padding: 80px 0;
+      background: var(--bg);
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      border-radius: 24px;
+      padding: 60px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: rgba(201,148,26,0.10);
+      border-radius: 50%;
+    }
+
+    .cta-banner h2 { color: #fff; font-size: 1.9rem; margin-bottom: 12px; }
+    .cta-banner p  { color: rgba(255,255,255,0.75); margin-bottom: 28px; font-size: 1.05rem; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-visual { aspect-ratio: 2/1; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .cta-banner { padding: 40px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     Navigation Bar
+     ============================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+
+      <!-- ✏️ [แก้ไข] ชื่อแบรนด์และลิงก์กลับหน้าแรก -->
+      <a href="./index.html" class="navbar-brand">
+        <div class="brand-icon">📱</div>
+        <div class="brand-text">
+          <span class="brand-name">Boorapatis Apps</span>
+          <span class="brand-sub">Mobile Application Developer</span>
+        </div>
+      </a>
+
+      <!-- ✏️ [แก้ไข] เมนู Navigation — เพิ่ม/ลบเมนูได้ที่นี่ -->
+      <nav class="navbar-nav" id="navMenu">
+        <a href="#apps">แอปของเรา</a>
+        <a href="#values">แนวคิด</a>
+        <a href="#about">เกี่ยวกับ</a>
+        <a href="#contact" class="nav-cta">ติดต่อ</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     Hero Section
+     ============================================================ -->
+<section class="main-hero">
+  <div class="hero-deco"></div>
+  <div class="hero-deco-2"></div>
+
+  <div class="container">
+    <div class="main-hero-content">
+      <!-- ✏️ [แก้ไข] ไอคอน Emoji ของผู้พัฒนา (หรือใส่รูปภาพแทนได้) -->
+      <div class="dev-avatar fade-up">👨‍💻</div>
+
+      <p class="hero-tagline fade-up delay-1">Mobile Application Developer</p>
+
+      <!-- ✏️ [แก้ไข] ชื่อผู้พัฒนา -->
+      <h1 class="fade-up delay-2">
+        สวัสดีครับ ผม<br>
+        <em>Boorapatis Ploysuwan</em>
+      </h1>
+
+      <!-- ✏️ [แก้ไข] คำอธิบายตัวเอง -->
+      <p class="subtitle fade-up delay-3">
+        นักพัฒนาแอปพลิเคชันมือถือที่เน้นความ<strong>ปลอดภัย</strong> ใช้งาน<strong>ง่าย</strong><br>
+        และ<strong>สอดคล้องกับวิถีชีวิตประจำวัน</strong>ของคนไทย<br>
+        ข้อมูลของคุณเก็บในเครื่องของคุณ — ปลอดภัย 100%
+      </p>
+
+      <!-- ✏️ [แก้ไข] แท็กคีย์เวิร์ด/ทักษะ -->
+      <div class="hero-chips fade-up delay-4">
+        <span class="hero-chip">🔒 ข้อมูลปลอดภัย</span>
+        <span class="hero-chip">📱 iOS &amp; Android</span>
+        <span class="hero-chip">🇹🇭 ออกแบบสำหรับคนไทย</span>
+        <span class="hero-chip">⚡ ใช้งานง่าย</span>
+      </div>
+
+      <div class="fade-up delay-4">
+        <a href="#apps" class="btn btn-accent btn-lg">ดูแอปพลิเคชัน</a>
+        <a href="#contact" class="btn btn-ghost btn-lg" style="margin-left:12px;">ติดต่อเรา</a>
+      </div>
+    </div>
+  </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+  </svg>
+</section>
+
+
+<!-- ============================================================
+     Apps Section
+     ▶ วิธีเพิ่มแอปใหม่:
+       1. คัดลอก block <article class="app-card"> ... </article> ทั้งหมด
+       2. วางต่อท้ายหลัง app-card ตัวสุดท้าย (ก่อน coming-soon card)
+       3. แก้ไขชื่อ, คำอธิบาย, ไอคอน, ลิงก์ให้ตรงกับแอปใหม่
+       4. สร้างโฟลเดอร์ใหม่ใน apps/ พร้อมไฟล์ index/privacy/support/terms
+     ============================================================ -->
+<section class="apps-section" id="apps">
+  <div class="container">
+    <div class="text-center scroll-reveal">
+      <span class="section-label">📱 แอปพลิเคชันของเรา</span>
+      <h2 class="section-title">เครื่องมือที่ออกแบบมาเพื่อคุณ</h2>
+      <p class="section-subtitle">
+        ทุกแอปพลิเคชันสร้างขึ้นด้วยใจ เน้นความง่าย ปลอดภัย
+        และเหมาะสมกับการใช้งานจริงในชีวิตประจำวันของคนไทย
+      </p>
+    </div>
+
+    <div class="grid-auto" style="max-width:960px; margin:0 auto;">
+
+      <!-- ══════════════════════════════════════════════════
+           แอป #1 — บัญชีวิถีไทย
+           ✏️ [แก้ไข] ข้อมูลแอป #1 ทั้งหมดอยู่ใน block นี้
+           ══════════════════════════════════════════════════ -->
+      <article class="app-card scroll-reveal">
+        <div class="app-card-header">
+          <!-- ✏️ [แก้ไข] ไอคอนแอป — เปลี่ยน emoji หรือใส่ <img> แทน -->
+          <div class="app-icon" style="background: linear-gradient(135deg, #1a5276, #2471a3);">📒</div>
+          <div>
+            <!-- ✏️ [แก้ไข] ชื่อแอป -->
+            <h3 class="app-card-name">บัญชีวิถีไทย</h3>
+            <!-- ✏️ [แก้ไข] คำโปรย/แท็กไลน์ -->
+            <p class="app-card-tagline">บันทึกรายรับ-รายจ่าย สไตล์ไทย</p>
+            <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+              <span class="badge badge-success">✓ เปิดให้ใช้แล้ว</span>
+              <span class="badge badge-info">iOS &amp; Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card-body">
+          <!-- ✏️ [แก้ไข] คำอธิบายแอป -->
+          <p style="font-size:14px; color:var(--text-body); margin-bottom:14px; line-height:1.8;">
+            แอปบันทึกรายรับ-รายจ่ายที่ออกแบบให้สอดคล้องกับสังคมและวิถีชีวิตคนไทย
+            ดูง่าย ใช้ง่าย และข้อมูลทั้งหมดเก็บในเครื่องของคุณเท่านั้น
+          </p>
+          <!-- ✏️ [แก้ไข] รายการฟีเจอร์ของแอป -->
+          <ul class="app-features">
+            <li>บันทึกรายรับ-รายจ่ายรายวันได้ง่ายและรวดเร็ว</li>
+            <li>ดูสรุปยอดรายเดือนและรายปีได้ทันที</li>
+            <li>จัดหมวดหมู่รายการแบบไทย เช่น ค่าข้าว ค่าเดินทาง บุญกุศล</li>
+            <li>ข้อมูลเก็บในเครื่องของคุณ — ไม่มีการส่งข้อมูลออกไปไหน</li>
+          </ul>
+        </div>
+
+        <div class="app-card-footer">
+          <div class="app-card-links">
+            <!-- ✏️ [แก้ไข] ลิงก์ App Store — ใส่ URL จริงหลังวางขายแล้ว -->
+            <a href="#" class="download-btn" title="ดาวน์โหลดบน App Store">
+              <span class="download-btn-icon">🍎</span>
+              <span class="download-btn-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <!-- ✏️ [แก้ไข] ลิงก์ Google Play — ใส่ URL จริงหลังวางขายแล้ว -->
+            <a href="#" class="download-btn google" title="ดาวน์โหลดบน Google Play">
+              <span class="download-btn-icon">▶</span>
+              <span class="download-btn-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+            <!-- ลิงก์หน้าแอป / ข้อมูลเพิ่มเติม -->
+            <a href="./apps/banchee-witheethai/index.html" class="btn btn-outline btn-sm">รายละเอียด →</a>
+          </div>
+        </div>
+      </article>
+      <!-- ══ จบ แอป #1 ══ -->
+
+
+      <!-- ══════════════════════════════════════════════════
+           แอป #2 — ขายดี
+           ✏️ [แก้ไข] ข้อมูลแอป #2 ทั้งหมดอยู่ใน block นี้
+           ══════════════════════════════════════════════════ -->
+      <article class="app-card scroll-reveal delay-1">
+        <div class="app-card-header">
+          <!-- ✏️ [แก้ไข] ไอคอนแอป -->
+          <div class="app-icon" style="background: linear-gradient(135deg, #1e6b3a, #27ae60);">🏪</div>
+          <div>
+            <!-- ✏️ [แก้ไข] ชื่อแอป -->
+            <h3 class="app-card-name">ขายดี</h3>
+            <!-- ✏️ [แก้ไข] คำโปรย/แท็กไลน์ -->
+            <p class="app-card-tagline">ระบบบันทึกการขายสำหรับร้านค้าขนาดเล็ก</p>
+            <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+              <span class="badge badge-success">✓ เปิดให้ใช้แล้ว</span>
+              <span class="badge badge-info">iOS &amp; Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card-body">
+          <!-- ✏️ [แก้ไข] คำอธิบายแอป -->
+          <p style="font-size:14px; color:var(--text-body); margin-bottom:14px; line-height:1.8;">
+            ตัวช่วยสำหรับร้านค้าขนาดเล็ก บันทึกการขายและค่าใช้จ่ายในร้าน
+            ดูยอดขายและกำไรสุทธิได้สะดวก ข้อมูลทั้งหมดเก็บในเครื่องของคุณ
+          </p>
+          <!-- ✏️ [แก้ไข] รายการฟีเจอร์ -->
+          <ul class="app-features">
+            <li>บันทึกยอดขายและค่าใช้จ่ายได้ง่ายทุกวัน</li>
+            <li>ดูสรุปยอดขายและกำไรรายวัน รายเดือน</li>
+            <li>เหมาะสำหรับร้านค้าไม้, แผงตลาด, ร้านค้าชุมชน</li>
+            <li>ข้อมูลเก็บในเครื่องของคุณ — ปลอดภัย ไม่ผ่าน Cloud</li>
+          </ul>
+        </div>
+
+        <div class="app-card-footer">
+          <div class="app-card-links">
+            <!-- ✏️ [แก้ไข] ลิงก์ App Store -->
+            <a href="#" class="download-btn" title="ดาวน์โหลดบน App Store">
+              <span class="download-btn-icon">🍎</span>
+              <span class="download-btn-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <!-- ✏️ [แก้ไข] ลิงก์ Google Play -->
+            <a href="#" class="download-btn google" title="ดาวน์โหลดบน Google Play">
+              <span class="download-btn-icon">▶</span>
+              <span class="download-btn-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+            <a href="./apps/khaidee/index.html" class="btn btn-outline btn-sm">รายละเอียด →</a>
+          </div>
+        </div>
+      </article>
+      <!-- ══ จบ แอป #2 ══ -->
+
+
+      <!-- ══════════════════════════════════════════════════
+           ตัวอย่าง แอป #3 — Coming Soon
+           ✏️ [แก้ไข] เมื่อมีแอปใหม่ ให้ลบ card นี้ออกและสร้าง
+           app-card จริงแทน (ดูตัวอย่างจาก แอป #1 หรือ #2)
+
+           หากต้องการเพิ่มแอปใหม่หลายตัว ให้คัดลอก block ข้างบน
+           และแทนที่ block coming-soon นี้
+           ══════════════════════════════════════════════════ -->
+      <article class="app-card coming-soon scroll-reveal delay-2">
+        <div class="app-card-header">
+          <div class="app-icon" style="background: linear-gradient(135deg, #5f6368, #9aa0a6);">🔮</div>
+          <div>
+            <!-- ✏️ [แก้ไข] ชื่อแอปที่กำลังจะมา -->
+            <h3 class="app-card-name">แอปใหม่กำลังมา...</h3>
+            <p class="app-card-tagline">ยังอยู่ระหว่างการพัฒนา</p>
+            <div style="margin-top:8px;">
+              <span class="badge badge-coming">⏳ เร็วๆ นี้</span>
+            </div>
+          </div>
+        </div>
+        <div class="app-card-body">
+          <!-- ✏️ [แก้ไข] คำอธิบายแอปที่กำลังจะมา -->
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.8;">
+            กำลังพัฒนาแอปพลิเคชันใหม่อยู่ ติดตามข่าวสารได้เร็วๆ นี้
+            หากสนใจสามารถลงทะเบียนรอรับการแจ้งเตือนได้ที่ด้านล่าง
+          </p>
+        </div>
+        <div class="app-card-footer">
+          <a href="#contact" class="btn btn-outline btn-sm">แจ้งเมื่อพร้อม →</a>
+        </div>
+      </article>
+      <!-- ══ จบ Coming Soon ══ -->
+
+    </div><!-- end grid -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     Values / Philosophy Section
+     ============================================================ -->
+<section class="values-section" id="values">
+  <div class="container">
+    <div class="text-center scroll-reveal" style="margin-bottom:56px;">
+      <span class="section-label" style="background:rgba(201,148,26,0.20); border-color:rgba(201,148,26,0.40);">💡 แนวคิดการพัฒนา</span>
+      <h2 class="section-title" style="color:#fff;">ทุกแอปสร้างด้วยหลักการเหล่านี้</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.70);">
+        ความเชื่อและแนวทางที่ใช้ในทุกขั้นตอนการพัฒนาแอปพลิเคชัน
+      </p>
+    </div>
+
+    <!-- ✏️ [แก้ไข] เพิ่ม/แก้ไข value cards ได้ที่นี่ -->
+    <div class="grid-3 scroll-reveal">
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h3>ความปลอดภัยก่อนเสมอ</h3>
+        <p>ข้อมูลของผู้ใช้ทุกอย่างเก็บไว้ในเครื่องของผู้ใช้เอง ไม่มีการส่งข้อมูลออกไปยัง server หรือ cloud ใดๆ ทั้งสิ้น</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🇹🇭</div>
+        <h3>ออกแบบเพื่อคนไทย</h3>
+        <p>ทุกฟีเจอร์ออกแบบโดยคำนึงถึงบริบทสังคมไทย ภาษาไทย และความต้องการจริงของผู้ใช้ชาวไทย</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">✨</div>
+        <h3>ใช้งานง่ายที่สุด</h3>
+        <p>ทุกหน้าจอออกแบบให้เรียบง่าย เข้าถึงได้ทุกกลุ่มอายุ ใช้ได้ทันทีโดยไม่ต้องฝึก</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📵</div>
+        <h3>ไม่มีโฆษณา</h3>
+        <p>แอปพลิเคชันของเราไม่มีโฆษณาขัดจังหวะ เพื่อประสบการณ์ใช้งานที่สะอาดและปลอดภัย</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚙️</div>
+        <h3>อัปเดตต่อเนื่อง</h3>
+        <p>รับฟังความคิดเห็นและปรับปรุงแอปอย่างสม่ำเสมอ เพื่อให้ตอบโจทย์ผู้ใช้มากที่สุด</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>โปร่งใสและซื่อสัตย์</h3>
+        <p>นโยบายความเป็นส่วนตัวที่ชัดเจน ไม่เก็บข้อมูลที่ไม่จำเป็น ไม่ขายข้อมูลผู้ใช้</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     About Section
+     ============================================================ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Visual Placeholder -->
+      <!-- ✏️ [แก้ไข] เปลี่ยน emoji หรือใส่ <img> รูปจริงของคุณ -->
+      <div class="about-visual scroll-reveal">👨‍💻</div>
+
+      <div class="about-content scroll-reveal delay-2">
+        <span class="section-label">👤 เกี่ยวกับผู้พัฒนา</span>
+        <h2 class="section-title" style="margin-bottom:20px;">Boorapatis Ploysuwan</h2>
+
+        <!-- ✏️ [แก้ไข] ประวัติย่อของผู้พัฒนา -->
+        <p class="lead">
+          นักพัฒนาแอปพลิเคชันมือถือ ที่มุ่งมั่นสร้างเครื่องมือดิจิทัล
+          ที่เหมาะกับการใช้งานของคนไทยในชีวิตประจำวัน
+        </p>
+        <p class="lead">
+          เชื่อว่าเทคโนโลยีที่ดีไม่จำเป็นต้องซับซ้อน และทุกคนควรมีสิทธิ์
+          ใช้งานแอปที่ปลอดภัย เข้าใจง่าย และให้ความเป็นส่วนตัวอย่างแท้จริง
+        </p>
+
+        <!-- ✏️ [แก้ไข] ทักษะ/เครื่องมือที่ใช้ในการพัฒนา -->
+        <div class="skills-grid">
+          <div class="skill-chip"><span class="icon">📱</span> iOS Development</div>
+          <div class="skill-chip"><span class="icon">🤖</span> Android Development</div>
+          <div class="skill-chip"><span class="icon">🔒</span> Data Privacy</div>
+          <div class="skill-chip"><span class="icon">🎨</span> UI/UX Design</div>
+          <div class="skill-chip"><span class="icon">🇹🇭</span> Thai Localization</div>
+          <div class="skill-chip"><span class="icon">⚡</span> App Optimization</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CTA / Contact Section
+     ============================================================ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-banner scroll-reveal">
+      <h2>มีคำถามหรืออยากติดต่อ?</h2>
+      <p>
+        ยินดีรับฟังความคิดเห็น ข้อเสนอแนะ หรือปัญหาการใช้งาน
+        ทุกเสียงมีความหมายและช่วยให้แอปของเราดีขึ้น
+      </p>
+
+      <!-- ✏️ [แก้ไข] อีเมลติดต่อของคุณ -->
+      <a href="mailto:burapatis@gmail.com" class="btn btn-accent btn-lg" style="margin-right:12px;">
+        📧 ส่งอีเมลหาเรา
+      </a>
+
+      <!-- ✏️ [แก้ไข] ลบหรือเปลี่ยน URL ลิงก์ Social Media ตามต้องการ -->
+      <!-- <a href="https://github.com/yourusername" class="btn btn-ghost btn-lg">GitHub</a> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     Footer
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Column 1: Developer Info -->
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <div class="brand-icon">📱</div>
+          <!-- ✏️ [แก้ไข] ชื่อแบรนด์ใน Footer -->
+          <span style="color:#fff; font-weight:700; font-size:15px;">Boorapatis Apps</span>
+        </div>
+        <!-- ✏️ [แก้ไข] คำอธิบายแบรนด์ใน Footer -->
+        <p>
+          พัฒนาแอปพลิเคชันมือถือที่ปลอดภัย ใช้ง่าย
+          และสอดคล้องกับชีวิตประจำวันของคนไทย
+        </p>
+        <!-- ✏️ [แก้ไข] อีเมล -->
+        <p style="margin-top:10px;">
+          📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Column 2: Apps Links -->
+      <div>
+        <h4>แอปพลิเคชัน</h4>
+        <ul class="footer-links">
+          <!-- ✏️ [แก้ไข] เพิ่ม/แก้ไขรายการแอปใน Footer ได้ที่นี่ -->
+          <li><a href="./apps/banchee-witheethai/index.html">บัญชีวิถีไทย</a></li>
+          <li><a href="./apps/khaidee/index.html">ขายดี</a></li>
+          <!-- ✏️ [แก้ไข] เพิ่มแอปใหม่: <li><a href="./apps/ชื่อโฟลเดอร์/index.html">ชื่อแอป</a></li> -->
+        </ul>
+      </div>
+
+      <!-- Column 3: Legal -->
+      <div>
+        <h4>ข้อมูลทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <!-- ✏️ [แก้ไข] ลิงก์เอกสารทางกฎหมาย (ลิงก์ตัวแทนทั่วไป) -->
+          <li><a href="./apps/banchee-witheethai/privacy.html">นโยบายความเป็นส่วนตัว — บัญชีวิถีไทย</a></li>
+          <li><a href="./apps/banchee-witheethai/terms.html">ข้อกำหนดการใช้งาน — บัญชีวิถีไทย</a></li>
+          <li><a href="./apps/khaidee/privacy.html">นโยบายความเป็นส่วนตัว — ขายดี</a></li>
+          <li><a href="./apps/khaidee/terms.html">ข้อกำหนดการใช้งาน — ขายดี</a></li>
+        </ul>
+      </div>
+
+    </div><!-- end footer-grid -->
+
+    <div class="footer-bottom">
+      <!-- ✏️ [แก้ไข] ปีลิขสิทธิ์และชื่อผู้พัฒนา -->
+      <p>© 2025 Boorapatis Ploysuwan. สงวนลิขสิทธิ์ทุกประการ.</p>
+      <p>Made with ❤️ for Thailand</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JavaScript
+     ============================================================ -->
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile menu toggle
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.navbar-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navMenu').classList.remove('open');
+    });
+  });
+
+  // Scroll reveal animation
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

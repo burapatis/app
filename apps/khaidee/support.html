@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ความช่วยเหลือ — ขายดี</title>
+  <meta name="description" content="ความช่วยเหลือและ FAQ สำหรับแอปพลิเคชัน ขายดี ระบบ POS สำหรับร้านค้าขนาดเล็ก" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="../../assets/favicon.ico" />
+
+  <!-- ธีมสีเขียวสำหรับแอปขายดี -->
+  <style>
+    :root {
+      --app-primary: #1e6b3a;
+      --app-primary-dark: #155129;
+      --app-accent: #27ae60;
+    }
+    .legal-hero {
+      background: linear-gradient(135deg, var(--app-primary) 0%, var(--app-primary-dark) 100%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand">
+        <div class="brand-icon">📱</div>
+        <div class="brand-text">
+          <span class="brand-name">Boorapatis Apps</span>
+          <span class="brand-sub">← กลับหน้าหลัก</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแอป</a>
+        <a href="./privacy.html">นโยบาย</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="legal-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">ขายดี</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>ความช่วยเหลือ</span>
+    </div>
+    <h1>ความช่วยเหลือ &amp; FAQ</h1>
+    <p>แอปพลิเคชัน <strong>ขายดี</strong> | พบคำตอบสำหรับคำถามที่พบบ่อย</p>
+  </div>
+</section>
+
+
+<!-- Support Content -->
+<main style="max-width:800px; margin:0 auto; padding:56px 24px 80px;">
+
+  <!-- Quick Contact Banner -->
+  <!-- ✏️ [แก้ไข] อีเมลติดต่อ -->
+  <div style="background:var(--accent-pale); border:1px solid var(--accent-light); border-radius:var(--radius); padding:24px 28px; margin-bottom:40px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+    <span style="font-size:36px;">📧</span>
+    <div>
+      <strong style="color:var(--text-dark); font-size:16px;">ต้องการความช่วยเหลือเพิ่มเติม?</strong>
+      <p style="margin:4px 0 0; color:var(--text-body); font-size:14px;">
+        ส่งอีเมลหาเราได้ที่
+        <a href="mailto:burapatis@gmail.com" style="color:var(--primary); font-weight:600;">burapatis@gmail.com</a>
+        &nbsp;|&nbsp; ตอบกลับภายใน 7 วันทำการ
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       FAQ Section
+       ✏️ [แก้ไข] เพิ่ม/แก้ไข FAQ ได้ที่นี่
+       วิธีเพิ่ม FAQ ใหม่:
+       1. คัดลอก block <div class="faq-item"> ... </div> ทั้งหมด
+       2. วางต่อท้าย FAQ ตัวสุดท้าย
+       3. แก้ไขคำถามใน .faq-question และคำตอบใน .faq-answer
+       ============================================================ -->
+  <section>
+    <h2 style="font-size:1.3rem; margin-bottom:20px; color:var(--text-dark);">
+      🙋 คำถามที่พบบ่อย (FAQ)
+    </h2>
+
+    <!-- FAQ 1 -->
+    <div class="faq-item open">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <!-- ✏️ [แก้ไข] คำถาม -->
+        ข้อมูลยอดขายและกำไรของร้านฉันปลอดภัยไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] คำตอบ -->
+        ปลอดภัย 100% ครับ ข้อมูลทั้งหมดของคุณเก็บไว้ในเครื่องของคุณเท่านั้น
+        แอปนี้ไม่ต้องการการเชื่อมต่ออินเทอร์เน็ต และไม่ส่งข้อมูลใดๆ ออกไปยังเซิร์ฟเวอร์หรือ Cloud
+        ข้อมูลธุรกิจของคุณจึงอยู่ในมือคุณเสมอ ไม่มีใครเข้าถึงได้นอกจากตัวคุณ
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        เพิ่มสินค้าเข้าระบบได้มากแค่ไหน?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] แก้ไขตามข้อจำกัดจริงของแอป -->
+        ไม่มีขีดจำกัดจำนวนสินค้าครับ คุณสามารถเพิ่มสินค้าได้ตามต้องการ
+        โดยข้อจำกัดจะขึ้นอยู่กับพื้นที่จัดเก็บในอุปกรณ์ของคุณเท่านั้น
+        ซึ่งโดยทั่วไปสามารถรองรับสินค้าได้หลายพันรายการอย่างสบาย
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ถ้าเปลี่ยนเครื่องใหม่ ข้อมูลร้านค้าจะหายไปไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        เนื่องจากข้อมูลเก็บในเครื่อง หากเปลี่ยนเครื่องใหม่โดยไม่ได้สำรองข้อมูล ข้อมูลอาจสูญหายได้
+        แนะนำให้ใช้ฟีเจอร์ Export ข้อมูลในแอปก่อนเปลี่ยนเครื่องเสมอ
+        หรือใช้การสำรองข้อมูลของ iOS (iCloud Backup) หรือ Android (Google Backup)
+        <!-- ✏️ [แก้ไข] แก้ไขคำตอบนี้ตามฟีเจอร์ Export/Backup จริงในแอปของคุณ -->
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        แอปใช้งานฟรีหรือมีค่าใช้จ่าย?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] ตอบตามนโยบายราคาจริงของแอป -->
+        แอปขายดีดาวน์โหลดได้ฟรีและใช้งานฟรีครบทุกฟีเจอร์
+        ไม่มีโฆษณา ไม่มีค่าสมัครสมาชิก ไม่มีค่าธรรมเนียมรายเดือน
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        รองรับ iOS และ Android เวอร์ชันไหนบ้าง?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] เวอร์ชัน OS ที่รองรับ -->
+        รองรับ iOS เวอร์ชัน 14.0 ขึ้นไป และ Android เวอร์ชัน 8.0 (Oreo) ขึ้นไป
+        แนะนำให้อัปเดตระบบปฏิบัติการให้เป็นเวอร์ชันล่าสุดเพื่อประสบการณ์ที่ดีที่สุด
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ดูรายงานยอดขายและกำไรย้อนหลังได้ไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] แก้ไขตามฟีเจอร์รายงานจริงในแอป -->
+        ได้เลยครับ แอปขายดีมีระบบรายงานที่ช่วยให้คุณดูสรุปยอดขาย กำไร-ขาดทุน
+        และรายการขายย้อนหลังได้สะดวก ช่วยให้เห็นภาพรวมธุรกิจของคุณได้ชัดเจน
+        สามารถกรองดูรายวัน รายสัปดาห์ หรือรายเดือนได้ตามต้องการ
+      </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ทำไมแอปต้องการ Permission ใดบ้าง?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] รายการ Permission ที่แอปต้องการจริง -->
+        แอปขายดีใช้สิทธิ์เข้าถึงขั้นต่ำเท่าที่จำเป็น:
+        <br><br>
+        • <strong>Storage:</strong> เพื่อบันทึกข้อมูลสินค้าและยอดขายลงในเครื่องของคุณ<br>
+        • <strong>Camera (ไม่บังคับ):</strong> สำหรับถ่ายรูปสินค้าหรือสแกน Barcode หากมีฟีเจอร์นี้<br>
+        • <strong>ไม่ต้องการสิทธิ์อื่นๆ</strong> เช่น Location, Contacts, Microphone
+        <br><br>
+        แอปนี้ไม่ขอสิทธิ์ที่ไม่จำเป็นต่อการทำงานของแอปเด็ดขาด
+      </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        แอปค้าง / ปิดเองโดยไม่ทราบสาเหตุ ทำอย่างไร?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <!-- ✏️ [แก้ไข] แก้ไขวิธีแก้ปัญหาตามแอปจริง -->
+        ลองทำตามขั้นตอนนี้ตามลำดับ:
+        <br><br>
+        1. ปิดแอปและเปิดใหม่อีกครั้ง<br>
+        2. รีสตาร์ทอุปกรณ์ของคุณ<br>
+        3. ตรวจสอบว่ามีการอัปเดตแอปใน App Store / Play Store หรือไม่<br>
+        4. ถ้ายังมีปัญหา ลองถอนการติดตั้งและติดตั้งใหม่
+           (<strong>Export ข้อมูลออกก่อนเสมอ</strong>)<br>
+        5. หากปัญหายังคงอยู่ ติดต่อเราผ่านอีเมลด้านล่าง
+      </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        อยากเสนอฟีเจอร์ใหม่ หรือรายงานบัก ทำได้ไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        ยินดีมากครับ! ทุกเสียงของเจ้าของร้านมีความหมายและช่วยพัฒนาแอปให้ดียิ่งขึ้น
+        ส่งความคิดเห็น ฟีเจอร์ที่อยากได้ หรือรายงานบักมาได้ที่อีเมลด้านล่างเลยครับ
+      </div>
+    </div>
+
+    <!-- ✏️ [แก้ไข] เพิ่ม FAQ ใหม่ที่นี่
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        คำถามใหม่?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        คำตอบใหม่...
+      </div>
+    </div>
+    -->
+
+  </section>
+
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       Contact Form Section
+       ============================================================ -->
+  <section>
+    <h2 style="font-size:1.3rem; margin-bottom:8px; color:var(--text-dark);">📬 ติดต่อเรา</h2>
+    <p style="color:var(--text-muted); margin-bottom:24px;">
+      หากไม่พบคำตอบในส่วน FAQ หรือต้องการความช่วยเหลือเพิ่มเติม
+      สามารถติดต่อเราได้โดยตรง
+    </p>
+
+    <!-- ✏️ [แก้ไข] ข้อมูลติดต่อ -->
+    <div class="card" style="margin-bottom:28px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div>
+          <p style="font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:4px;">อีเมล</p>
+          <a href="mailto:burapatis@gmail.com" style="color:var(--primary); font-weight:600;">
+            burapatis@gmail.com
+          </a>
+        </div>
+        <div>
+          <p style="font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:4px;">เวลาตอบกลับ</p>
+          <p style="color:var(--text-dark); font-weight:500; margin:0;">ภายใน 7 วันทำการ</p>
+        </div>
+        <!-- ✏️ [แก้ไข] เพิ่มช่องทางติดต่ออื่นๆ ได้ที่นี่ -->
+        <!-- <div>
+          <p style="font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:4px;">LINE</p>
+          <p style="color:var(--text-dark);">@your-line-id</p>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- แบบฟอร์มส่ง Email (mailto form — ไม่ต้องใช้ backend) -->
+    <!-- ✏️ [แก้ไข] เปลี่ยนอีเมลใน action="mailto:..." -->
+    <form id="contactForm" onsubmit="sendMail(event)">
+      <div class="form-group">
+        <label class="form-label" for="name">ชื่อของคุณ <span style="color:var(--danger);">*</span></label>
+        <input type="text" id="name" class="form-control" placeholder="เช่น สมชาย ใจดี" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">อีเมลของคุณ <span style="color:var(--danger);">*</span></label>
+        <input type="email" id="email" class="form-control" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="topic">หัวข้อ</label>
+        <select id="topic" class="form-control">
+          <!-- ✏️ [แก้ไข] เพิ่ม/แก้ไขตัวเลือกหัวข้อ -->
+          <option value="general">คำถามทั่วไป</option>
+          <option value="bug">รายงานบัก / ปัญหาการใช้งาน</option>
+          <option value="feature">เสนอฟีเจอร์ใหม่</option>
+          <option value="data">ปัญหาข้อมูลสินค้าหรือยอดขาย</option>
+          <option value="privacy">นโยบายความเป็นส่วนตัว</option>
+          <option value="other">อื่นๆ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">ข้อความ <span style="color:var(--danger);">*</span></label>
+        <textarea id="message" class="form-control" placeholder="อธิบายปัญหาหรือคำถามของคุณที่นี่..." rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">
+        📧 ส่งข้อความ
+      </button>
+      <p style="text-align:center; font-size:13px; color:var(--text-muted); margin-top:12px;">
+        การส่งฟอร์มนี้จะเปิดโปรแกรมอีเมลของคุณเพื่อส่งข้อความมายังผู้พัฒนา
+      </p>
+    </form>
+  </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 Boorapatis Ploysuwan. สงวนลิขสิทธิ์ทุกประการ.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./index.html"   style="color:rgba(255,255,255,.45);font-size:13px;">หน้าแอป</a>
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+
+  // FAQ Toggle
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  // Contact Form (mailto)
+  function sendMail(e) {
+    e.preventDefault();
+    const name    = document.getElementById('name').value;
+    const email   = document.getElementById('email').value;
+    const topic   = document.getElementById('topic').value;
+    const message = document.getElementById('message').value;
+    // ✏️ [แก้ไข] เปลี่ยนอีเมลผู้รับ
+    const to = 'burapatis@gmail.com';
+    const subject = encodeURIComponent(`[ขายดี - ${topic}] จาก ${name}`);
+    const body    = encodeURIComponent(`ชื่อ: ${name}\nอีเมล: ${email}\nหัวข้อ: ${topic}\n\nข้อความ:\n${message}`);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  }
+</script>
+</body>
+</html>

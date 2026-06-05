@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ [แก้ไข] ชื่อแอปและคำอธิบาย -->
+  <title>ขายดี — ระบบบันทึกการขายสำหรับร้านค้าขนาดเล็ก</title>
+  <meta name="description" content="ขายดี แอปบันทึกการขายและจัดการร้านค้าขนาดเล็ก ดูยอดขาย กำไร ง่ายและปลอดภัย เก็บข้อมูลในเครื่อง" />
+  <meta name="author" content="Boorapatis Ploysuwan" />
+
+  <!-- Open Graph -->
+  <!-- ✏️ [แก้ไข] URL เว็บและรูป -->
+  <meta property="og:url"         content="https://burapatis.github.io/app/apps/khaidee/" />
+  <meta property="og:title"       content="ขายดี — ระบบบันทึกการขายสำหรับร้านค้า" />
+  <meta property="og:description" content="บันทึกยอดขายและกำไรได้ง่ายๆ เหมาะสำหรับร้านค้าขนาดเล็ก ข้อมูลปลอดภัยเก็บในเครื่อง" />
+  <meta property="og:image"       content="https://burapatis.github.io/app/apps/khaidee/og-image.png" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <!-- ✏️ [แก้ไข] Favicon -->
+  <link rel="icon" href="../../assets/favicon.ico" />
+
+  <style>
+    /* สไตล์เฉพาะหน้าแอป ขายดี */
+
+    /* ✏️ [แก้ไข] สีธีมของแอปนี้ (เขียว-ทอง — ร้านค้า/ค้าขาย) */
+    :root {
+      --app-primary:   #1e6b3a;
+      --app-secondary: #27ae60;
+      --app-accent:    #f39c12;
+    }
+
+    .app-hero {
+      padding: 130px 0 80px;
+      background: linear-gradient(135deg, #0d3320 0%, var(--app-primary) 50%, var(--app-secondary) 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 0L0 20M40 0L0 40M40 20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .app-hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .app-hero-info .app-icon-lg {
+      background: linear-gradient(135deg, #0d3320, var(--app-secondary));
+      margin-bottom: 24px;
+    }
+
+    .app-hero h1 {
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .app-hero .tagline {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.80);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .feature-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .feature-card p  { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .privacy-section {
+      background: linear-gradient(135deg, #0d3320, var(--app-primary));
+      padding: 80px 0;
+      color: #fff;
+    }
+
+    .app-info-table {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .app-info-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .app-info-row:last-child { border-bottom: none; }
+    .app-info-label { width: 140px; flex-shrink: 0; font-weight: 600; color: var(--text-muted); font-size: 13px; }
+    .app-info-value { color: var(--text-dark); }
+
+    /* Stat Highlight for Shop App */
+    .shop-stats {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .shop-stat { text-align: center; }
+    .shop-stat-num { font-size: 2rem; font-weight: 800; color: var(--accent-light); }
+    .shop-stat-lbl { font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+
+    @media (max-width: 768px) {
+      .app-hero-inner  { grid-template-columns: 1fr; }
+      .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+      .shop-stats       { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="../../index.html" class="navbar-brand">
+        <div class="brand-icon">📱</div>
+        <div class="brand-text">
+          <span class="brand-name">Boorapatis Apps</span>
+          <span class="brand-sub">← กลับหน้าหลัก</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="#features">ฟีเจอร์</a>
+        <a href="#screenshots">ภาพหน้าจอ</a>
+        <a href="./support.html">ช่วยเหลือ</a>
+        <a href="#download" class="nav-cta">ดาวน์โหลด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- App Hero -->
+<section class="app-hero" id="download">
+  <div class="container">
+    <div class="app-hero-inner">
+
+      <div class="app-hero-info fade-up">
+        <!-- ✏️ [แก้ไข] ไอคอนแอป -->
+        <div class="app-icon app-icon-lg">🏪</div>
+
+        <!-- ✏️ [แก้ไข] ชื่อแอปและคำโปรย -->
+        <h1>ขายดี</h1>
+        <p class="tagline">
+          ระบบบันทึกการขายสำหรับร้านค้าขนาดเล็ก<br>
+          ดูยอดขายและกำไรได้ง่ายๆ ทุกวัน<br>
+          ข้อมูลปลอดภัย เก็บในเครื่องของคุณ
+        </p>
+
+        <div style="margin-bottom:20px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="badge badge-success">✓ ใช้ได้ฟรี</span>
+          <span class="badge badge-info">iOS &amp; Android</span>
+          <span class="badge badge-gold">🔒 ข้อมูลในเครื่อง</span>
+        </div>
+
+        <!-- ✏️ [แก้ไข] ลิงก์ดาวน์โหลดจริง -->
+        <div class="download-group fade-up delay-2">
+          <a href="#" class="download-btn" title="ดาวน์โหลดบน App Store">
+            <span class="download-btn-icon">🍎</span>
+            <span class="download-btn-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+          <a href="#" class="download-btn google" title="ดาวน์โหลดบน Google Play">
+            <span class="download-btn-icon">▶</span>
+            <span class="download-btn-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="fade-up delay-2" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <!-- ✏️ [แก้ไข] ใส่ภาพ screenshot จริง แทน placeholder -->
+        <div class="screenshot-placeholder">
+          <span class="icon">🏪</span>
+          <span>หน้าหลัก<br><small>ใส่ภาพ screenshot</small></span>
+        </div>
+        <div class="screenshot-placeholder">
+          <span class="icon">💰</span>
+          <span>บันทึกยอดขาย<br><small>ใส่ภาพ screenshot</small></span>
+        </div>
+        <div class="screenshot-placeholder">
+          <span class="icon">📈</span>
+          <span>กราฟยอดขาย<br><small>ใส่ภาพ screenshot</small></span>
+        </div>
+        <div class="screenshot-placeholder">
+          <span class="icon">📋</span>
+          <span>สรุปกำไร<br><small>ใส่ภาพ screenshot</small></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Features -->
+<section class="section" id="features" style="background:var(--bg);">
+  <div class="container">
+    <div class="text-center scroll-reveal">
+      <span class="section-label">✨ ฟีเจอร์หลัก</span>
+      <h2 class="section-title">ช่วยร้านค้าของคุณได้อย่างไร?</h2>
+      <p class="section-subtitle">
+        ออกแบบมาสำหรับร้านค้าขนาดเล็กในประเทศไทย
+        ง่ายแม้ไม่มีความรู้ด้านบัญชี
+      </p>
+    </div>
+
+    <!-- ✏️ [แก้ไข] ฟีเจอร์ของแอป ขายดี -->
+    <div class="grid-3 scroll-reveal">
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-primary">💰</div>
+        <h3>บันทึกยอดขายรวดเร็ว</h3>
+        <p>บันทึกยอดขายแต่ละรายการได้ง่าย เพียงไม่กี่แตะ ไม่ต้องเสียเวลา ทำได้แม้ขณะขายสินค้า</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-accent">📊</div>
+        <h3>ดูยอดขายและกำไร</h3>
+        <p>สรุปยอดขาย ค่าใช้จ่าย และกำไรสุทธิแบบรายวัน รายเดือน เห็นภาพรวมธุรกิจได้ชัดเจน</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-green">🗂️</div>
+        <h3>จัดหมวดหมู่ค่าใช้จ่าย</h3>
+        <p>แยกหมวดหมู่ค่าใช้จ่ายร้านได้ เช่น ค่าของ ค่าเช่า ค่าแรง เพื่อวิเคราะห์ต้นทุนได้ง่าย</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-blue">🔒</div>
+        <h3>ข้อมูลร้านปลอดภัย 100%</h3>
+        <p>ข้อมูลธุรกิจของคุณเก็บในเครื่องเท่านั้น ไม่มีใครสามารถเข้าถึงได้ผ่านอินเทอร์เน็ต</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-purple">📱</div>
+        <h3>ใช้ได้ออฟไลน์</h3>
+        <p>ทำงานได้แม้ไม่มีสัญญาณอินเทอร์เน็ต เหมาะสำหรับร้านค้าในตลาด ข้างทาง หรือพื้นที่ห่างไกล</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:linear-gradient(135deg,#92400e,#d97706); color:#fff;">🏪</div>
+        <h3>เหมาะสำหรับร้านทุกประเภท</h3>
+        <p>ร้านอาหาร แผงตลาด ร้านของชำ ร้านค้าชุมชน หรือธุรกิจขนาดเล็กอื่นๆ ใช้ได้หมด</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Screenshots -->
+<section class="section" id="screenshots" style="background:var(--bg-white);">
+  <div class="container">
+    <div class="text-center scroll-reveal">
+      <span class="section-label">📸 ภาพหน้าจอ</span>
+      <h2 class="section-title">ดูตัวอย่างหน้าจอแอป</h2>
+      <p class="section-subtitle">เรียบง่าย ใช้งานได้จริง ไม่ยุ่งยาก</p>
+    </div>
+
+    <!-- ✏️ [แก้ไข] ใส่ภาพ screenshot จริงแทน placeholder
+         <img src="./screenshots/หน้าหลัก.png" alt="หน้าหลัก" style="border-radius:16px; width:100%;"> -->
+    <div class="screenshots-grid scroll-reveal">
+      <div class="screenshot-placeholder" style="aspect-ratio:9/18;">
+        <span class="icon">🏠</span>
+        <span>หน้าหลัก<br><small>./screenshots/home.png</small></span>
+      </div>
+      <div class="screenshot-placeholder" style="aspect-ratio:9/18;">
+        <span class="icon">➕</span>
+        <span>บันทึกขาย<br><small>./screenshots/add-sale.png</small></span>
+      </div>
+      <div class="screenshot-placeholder" style="aspect-ratio:9/18;">
+        <span class="icon">📈</span>
+        <span>ยอดขาย<br><small>./screenshots/sales.png</small></span>
+      </div>
+      <div class="screenshot-placeholder" style="aspect-ratio:9/18;">
+        <span class="icon">💼</span>
+        <span>กำไรสุทธิ<br><small>./screenshots/profit.png</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Privacy Highlight -->
+<section class="privacy-section">
+  <div class="container">
+    <div class="security-banner scroll-reveal" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);">
+      <div class="security-banner-icon">🔒</div>
+      <div>
+        <h2 style="color:#fff; margin-bottom:10px;">ข้อมูลธุรกิจของคุณ ปลอดภัยสูงสุด</h2>
+        <!-- ✏️ [แก้ไข] ข้อความด้านความปลอดภัย -->
+        <p style="color:rgba(255,255,255,0.80); font-size:1.05rem; margin-bottom:16px; line-height:1.8;">
+          ยอดขาย กำไร ต้นทุน และข้อมูลธุรกิจทั้งหมดเก็บในเครื่องของคุณเท่านั้น
+          ไม่มีผู้ใดสามารถเข้าถึงข้อมูลของคุณได้ผ่านทางออนไลน์
+          ข้อมูลธุรกิจของคุณเป็นของคุณอย่างแท้จริง
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="./privacy.html" class="btn btn-ghost btn-sm">อ่านนโยบายความเป็นส่วนตัว →</a>
+          <a href="./terms.html"   class="btn btn-ghost btn-sm">ข้อกำหนดการใช้งาน →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- App Info -->
+<section class="section" style="background:var(--bg);">
+  <div class="container" style="max-width:700px;">
+    <div class="text-center scroll-reveal" style="margin-bottom:32px;">
+      <span class="section-label">ℹ️ ข้อมูลแอป</span>
+      <h2 class="section-title">รายละเอียดแอปพลิเคชัน</h2>
+    </div>
+
+    <!-- ✏️ [แก้ไข] ข้อมูลแอป ขายดี -->
+    <div class="app-info-table scroll-reveal">
+      <div class="app-info-row">
+        <span class="app-info-label">ชื่อแอป</span>
+        <span class="app-info-value">ขายดี (Khaidee)</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">เวอร์ชันล่าสุด</span>
+        <!-- ✏️ [แก้ไข] เวอร์ชัน -->
+        <span class="app-info-value">1.0.0</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">ระบบปฏิบัติการ</span>
+        <!-- ✏️ [แก้ไข] OS ที่รองรับ -->
+        <span class="app-info-value">iOS 14+ / Android 8.0+</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">ภาษา</span>
+        <span class="app-info-value">ภาษาไทย</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">ราคา</span>
+        <!-- ✏️ [แก้ไข] ราคา -->
+        <span class="app-info-value">ฟรี (Free)</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">การเก็บข้อมูล</span>
+        <span class="app-info-value">เก็บเฉพาะในเครื่อง ไม่มีการส่งออก</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">ผู้พัฒนา</span>
+        <!-- ✏️ [แก้ไข] ชื่อผู้พัฒนา -->
+        <span class="app-info-value">Boorapatis Ploysuwan</span>
+      </div>
+      <div class="app-info-row">
+        <span class="app-info-label">อัปเดตล่าสุด</span>
+        <!-- ✏️ [แก้ไข] วันที่อัปเดต -->
+        <span class="app-info-value">มกราคม 2568 (2025)</span>
+      </div>
+    </div>
+
+    <div class="text-center scroll-reveal" style="margin-top:36px;">
+      <!-- ✏️ [แก้ไข] ลิงก์ดาวน์โหลด -->
+      <div class="download-group" style="justify-content:center;">
+        <a href="#" class="download-btn">
+          <span class="download-btn-icon">🍎</span>
+          <span class="download-btn-text"><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a href="#" class="download-btn google">
+          <span class="download-btn-icon">▶</span>
+          <span class="download-btn-text"><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#0d3320,#27ae60);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🏪</div>
+          <span style="color:#fff;font-weight:700;">ขายดี</span>
+        </div>
+        <!-- ✏️ [แก้ไข] อีเมลติดต่อ -->
+        <p>📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></p>
+        <p style="margin-top:8px;"><a href="../../index.html" style="color:rgba(255,255,255,.55)">← กลับหน้าหลัก</a></p>
+      </div>
+      <div>
+        <h4>เอกสารทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="./terms.html">ข้อกำหนดการใช้งาน</a></li>
+          <li><a href="./support.html">ความช่วยเหลือ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ผู้พัฒนา</h4>
+        <p>Boorapatis Ploysuwan</p>
+        <ul class="footer-links" style="margin-top:8px;">
+          <li><a href="../../index.html">แอปทั้งหมด</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <!-- ✏️ [แก้ไข] ปีลิขสิทธิ์ -->
+      <p>© 2025 Boorapatis Ploysuwan. สงวนลิขสิทธิ์ทุกประการ.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy Policy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
