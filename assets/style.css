@@ -655,6 +655,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 56px;
 }
 
+img.app-icon,
+.app-icon > img {
+  object-fit: cover;
+  padding: 0;
+  background: none;
+}
+
+img.brand-icon {
+  object-fit: cover;
+  padding: 0;
+  background: none;
+}
+
 /* ============================================================
    Screenshot Placeholder
    ============================================================ */
