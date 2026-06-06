@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>คำถามที่พบบ่อย — Boorapatis Apps</title>
+  <meta name="description" content="คำถามที่พบบ่อยและคำตอบโดยรวมสำหรับเว็บไซต์ Boorapatis Apps และแอปพลิเคชันทั้งหมด บัญชีวิถีไทย ขายดี วันดีๆ เพื่อนเตือนยา" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="icon" href="./assets/icon.png" type="image/png" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-pale);
+    }
+
+    .faq-section-title:first-of-type { margin-top: 0; }
+
+    .app-faq-intro {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+
+    .app-faq-intro img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .app-faq-intro strong {
+      display: block;
+      color: var(--text-dark);
+      font-size: 15px;
+    }
+
+    .app-faq-intro span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--accent-pale), #fff);
+      border: 1px solid var(--accent-light);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card h2 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .contact-card p {
+      color: var(--text-body);
+      margin-bottom: 0;
+    }
+
+    .faq-answer ul {
+      margin: 8px 0 0 18px;
+      list-style: disc;
+    }
+
+    .faq-answer li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./assets/icon.png" alt="Boorapatis Apps" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">Boorapatis Apps</span>
+          <span class="brand-sub">Mobile Application Developer</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html#apps">แอปของเรา</a>
+        <a href="./index.html#values">แนวคิด</a>
+        <a href="./index.html#about">เกี่ยวกับ</a>
+        <a href="./faq.html">คำถามที่พบบ่อย</a>
+        <a href="./index.html#contact" class="nav-cta">ติดต่อ</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="legal-hero">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="./index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>คำถามที่พบบ่อย</span>
+    </div>
+    <h1>🙋 คำถามที่พบบ่อย (FAQ)</h1>
+    <p>คำตอบโดยรวมสำหรับเว็บไซต์และแอปพลิเคชันทั้งหมดของ Boorapatis Apps</p>
+  </div>
+</section>
+
+<main class="legal-body">
+
+  <div class="legal-toc">
+    <h3>หัวข้อทั้งหมด</h3>
+    <a href="#general">🏠 ทั่วไป</a>
+    <a href="#download">📲 การดาวน์โหลดและแพลตฟอร์ม</a>
+    <a href="#privacy">🔒 ความปลอดภัยและข้อมูล</a>
+    <a href="#banchee">📒 บัญชีวิถีไทย</a>
+    <a href="#khaidee">🛒 ขายดี</a>
+    <a href="#wandee">📔 วันดีๆ</a>
+    <a href="#pheuan">💊 เพื่อนเตือนยา</a>
+    <a href="#troubleshoot">🔧 แก้ปัญหาทั่วไป</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+  <div style="background:var(--accent-pale); border:1px solid var(--accent-light); border-radius:var(--radius); padding:20px 24px; margin-bottom:32px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+    <span style="font-size:32px;">💡</span>
+    <p style="margin:0; font-size:14px; color:var(--text-body); line-height:1.8;">
+      หน้านี้รวบรวมคำถามที่พบบ่อยโดยรวม หากต้องการรายละเอียดเชิงลึกของแต่ละแอป
+      สามารถเข้าไปที่หน้า <strong>ความช่วยเหลือ</strong> ของแอปนั้นๆ ได้โดยตรง
+    </p>
+  </div>
+
+
+  <!-- ============================================================
+       ทั่วไป
+       ============================================================ -->
+  <div class="faq-section-title" id="general">🏠 ทั่วไป</div>
+
+  <div class="faq-item open">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      Boorapatis Apps คืออะไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      Boorapatis Apps คือเว็บไซต์รวมแอปพลิเคชันมือถือที่พัฒนาโดย <strong>Boorapatis Ploysuwan</strong>
+      เน้นแอปที่ปลอดภัย ใช้งานง่าย และเหมาะกับชีวิตประจำวันของคนไทย
+      ปัจจุบันมีแอปที่เปิดให้ใช้งานแล้ว ได้แก่ บัญชีวิถีไทย และ ขายดี
+      รวมถึงแอปที่อยู่ระหว่างทดสอบ เช่น วันดีๆ และ เพื่อนเตือนยา
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แอปทั้งหมดฟรีหรือไม่?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      แอปที่เปิดให้บริการแล้ว (บัญชีวิถีไทย, ขายดี) ดาวน์โหลดและใช้งานฟรีครบทุกฟีเจอร์
+      ไม่มีโฆษณา ไม่มีค่าสมัครสมาชิกรายเดือน
+      แอปที่อยู่ระหว่างทดสอบ (วันดีๆ, เพื่อนเตือนยา) สามารถเข้าร่วมทดสอบผ่าน TestFlight ได้ฟรีเช่นกัน
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แนวคิดหลักในการพัฒนาแอปคืออะไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ทุกแอปออกแบบตามหลัก <strong>Local-first</strong> — ข้อมูลสำคัญเก็บในเครื่องของผู้ใช้
+      ไม่ต้องสมัครสมาชิก ไม่มี backend ที่ผู้พัฒนาเข้าถึงข้อมูลได้
+      เน้นตัวอักษรอ่านง่าย ปุ่มใหญ่ และขั้นตอนไม่ซับซ้อน เหมาะกับผู้ใช้ทุกวัย
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       การดาวน์โหลด
+       ============================================================ -->
+  <div class="faq-section-title" id="download">📲 การดาวน์โหลดและแพลตฟอร์ม</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ดาวน์โหลดแอปได้จากที่ไหน?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li><strong>บัญชีวิถีไทย</strong> และ <strong>ขายดี</strong> — ดาวน์โหลดได้จาก App Store แล้ว</li>
+        <li><strong>วันดีๆ</strong> และ <strong>เพื่อนเตือนยา</strong> — อยู่ระหว่างทดสอบผ่าน TestFlight (ลิงก์อยู่ในหน้ารายละเอียดแอป)</li>
+        <li><strong>Google Play</strong> — กำลังเตรียมเปิดให้บริการ (ลิงก์จะอัปเดตเมื่อพร้อม)</li>
+      </ul>
+      ดูลิงก์ดาวน์โหลดล่าสุดได้ที่ <a href="./index.html#apps">หน้าแรก → แอปของเรา</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      TestFlight คืออะไร? ใช้งานอย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      TestFlight เป็นบริการของ Apple สำหรับทดสอบแอปก่อนวางขายจริง
+      คุณต้องติดตั้งแอป TestFlight จาก App Store ก่อน จากนั้นกดลิงก์เชิญทดสอบที่หน้ารายละเอียดแอป
+      แอปที่ทดสอบผ่าน TestFlight อาจมีการอัปเดตบ่อยขึ้นและอาจพบข้อบกพร่องเล็กน้อยได้
+      ซึ่งเป็นส่วนหนึ่งของกระบวนการพัฒนา
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      รองรับอุปกรณ์และระบบปฏิบัติการอะไรบ้าง?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li><strong>บัญชีวิถีไทย</strong> — iOS 13.0 ขึ้นไป (iPhone / iPad)</li>
+        <li><strong>ขายดี</strong> — iOS 16.4 ขึ้นไป (iPhone)</li>
+        <li><strong>วันดีๆ</strong> — iOS &amp; iPadOS (TestFlight)</li>
+        <li><strong>เพื่อนเตือนยา</strong> — iOS &amp; iPadOS (TestFlight)</li>
+      </ul>
+      แนะนำให้อัปเดตระบบปฏิบัติการเป็นเวอร์ชันล่าสุดเพื่อประสบการณ์ที่ดีที่สุด
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       ความปลอดภัย
+       ============================================================ -->
+  <div class="faq-section-title" id="privacy">🔒 ความปลอดภัยและข้อมูล</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ข้อมูลของฉันถูกเก็บที่ไหน? ปลอดภัยแค่ไหน?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      แอปทุกตัวของ Boorapatis Apps ใช้แนวทาง <strong>เก็บข้อมูลในเครื่อง (Local-first)</strong>
+      ข้อมูลที่คุณบันทึก — ไม่ว่าจะเป็นบัญชีรายรับรายจ่าย ยอดขาย ไดอารี่ หรือบันทึกสุขภาพ —
+      อยู่ในอุปกรณ์ของคุณเท่านั้น ไม่ส่งไปยังเซิร์ฟเวอร์หรือ Cloud ของผู้พัฒนา
+      ผู้พัฒนาไม่สามารถเข้าถึงหรือเห็นข้อมูลส่วนตัวของคุณได้
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ต้องสมัครสมาชิกหรือล็อกอินไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ไม่ต้องครับ แอปทุกตัวไม่มีระบบสมัครสมาชิก ไม่ต้องล็อกอิน ไม่ต้องให้เบอร์โทรหรืออีเมลเพื่อเริ่มใช้งาน
+      เปิดแอปแล้วใช้งานได้ทันที
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ถ้าเปลี่ยนเครื่องใหม่ ข้อมูลจะหายไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      เนื่องจากข้อมูลเก็บในเครื่อง หากเปลี่ยนอุปกรณ์โดยไม่ได้สำรองข้อมูล ข้อมูลอาจสูญหายได้
+      แนะนำดังนี้:
+      <ul>
+        <li>ใช้ <strong>iCloud Backup</strong> ของ iOS ก่อนเปลี่ยนเครื่อง</li>
+        <li>ใช้ฟีเจอร์ <strong>ส่งออก CSV/PDF</strong> ในแอป (ถ้ามี) เพื่อเก็บสำเนาข้อมูล</li>
+        <li>สำหรับบัญชีวิถีไทย สามารถ Export CSV ก่อนย้ายเครื่องได้</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แอปเก็บข้อมูลอะไรบ้าง? ดูนโยบายความเป็นส่วนตัวได้ที่ไหน?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      แต่ละแอปมีนโยบายความเป็นส่วนตัวแยกตามประเภทข้อมูลที่เก็บ ดูได้ที่:
+      <ul>
+        <li><a href="./apps/banchee-witheethai/privacy.html">นโยบายความเป็นส่วนตัว — บัญชีวิถีไทย</a></li>
+        <li><a href="./apps/khaidee/privacy.html">นโยบายความเป็นส่วนตัว — ขายดี</a></li>
+        <li><a href="./apps/wandee/privacy.html">นโยบายความเป็นส่วนตัว — วันดีๆ</a></li>
+        <li><a href="./apps/pheuan-tueanya/privacy.html">นโยบายความเป็นส่วนตัว — เพื่อนเตือนยา</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       บัญชีวิถีไทย
+       ============================================================ -->
+  <div class="faq-section-title" id="banchee">📒 บัญชีวิถีไทย</div>
+
+  <div class="app-faq-intro">
+    <img src="./apps/banchee-witheethai/icon.png" alt="บัญชีวิถีไทย" />
+    <div>
+      <strong>บัญชีวิถีไทย</strong>
+      <span>บันทึกรายรับ-รายจ่าย สไตล์ไทย · เปิดให้ใช้แล้วบน App Store</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      บัญชีวิถีไทยใช้ทำอะไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      แอปบันทึกรายรับ-รายจ่ายที่ออกแบบให้สอดคล้องกับวิถีชีวิตคนไทย
+      บันทึกรายการรายวัน จัดหมวดหมู่แบบไทย (เช่น ค่าข้าว ค่าเดินทาง บุญกุศล)
+      และดูสรุปยอดรายเดือน/รายปีได้ทันที
+      <br><br>
+      <a href="./apps/banchee-witheethai/index.html">ดูรายละเอียดแอป →</a>
+      &nbsp;·&nbsp;
+      <a href="./apps/banchee-witheethai/support.html">ความช่วยเหลือเพิ่มเติม →</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ส่งออกข้อมูลบัญชีเป็นไฟล์ได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ได้ครับ แอปมีฟีเจอร์ Export CSV สำหรับส่งออกข้อมูลรายรับ-รายจ่าย
+      เหมาะสำหรับสำรองข้อมูลหรือนำไปใช้ในโปรแกรมอื่น
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       ขายดี
+       ============================================================ -->
+  <div class="faq-section-title" id="khaidee">🛒 ขายดี</div>
+
+  <div class="app-faq-intro">
+    <img src="./apps/khaidee/icon.png" alt="ขายดี" />
+    <div>
+      <strong>ขายดี</strong>
+      <span>ระบบบันทึกการขายสำหรับร้านค้าขนาดเล็ก · เปิดให้ใช้แล้วบน App Store</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ขายดีเหมาะกับร้านแบบไหน?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      เหมาะกับร้านค้าขนาดเล็ก เช่น ร้านค้าไม้ แผงตลาด ร้านค้าชุมชน
+      ที่ต้องการบันทึกยอดขายและค่าใช้จ่ายในร้าน ดูกำไร-ขาดทุน และสรุปยอดขายย้อนหลังได้ง่าย
+      <br><br>
+      <a href="./apps/khaidee/index.html">ดูรายละเอียดแอป →</a>
+      &nbsp;·&nbsp;
+      <a href="./apps/khaidee/support.html">ความช่วยเหลือเพิ่มเติม →</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ข้อมูลยอดขายในร้านปลอดภัยไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ปลอดภัยครับ ข้อมูลธุรกิจทั้งหมดเก็บในเครื่องของคุณ ไม่ส่งออกไปยังเซิร์ฟเวอร์
+      ไม่ต้องเชื่อมต่ออินเทอร์เน็ตเพื่อใช้งาน และไม่มีใครเข้าถึงข้อมูลร้านได้นอกจากตัวคุณ
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       วันดีๆ
+       ============================================================ -->
+  <div class="faq-section-title" id="wandee">📔 วันดีๆ</div>
+
+  <div class="app-faq-intro">
+    <img src="./apps/wandee/icon.png" alt="วันดีๆ" />
+    <div>
+      <strong>วันดีๆ</strong>
+      <span>ไดอารี่สำหรับผู้สูงวัยไทย · อยู่ระหว่างทดสอบ TestFlight</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      วันดีๆต่างจากไดอารี่ทั่วไปอย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ออกแบบมาเพื่อผู้สูงวัยไทยโดยเฉพาะ — ตัวอักษรใหญ่ ปุ่มชัดเจน ใช้งานง่าย
+      บันทึกได้ทั้งข้อความ รูปภาพ และเสียง (แทนการพิมพ์)
+      มีปฏิทินย้อนหลังและค้นหาบันทึกเก่าจากคำสำคัญ
+      ข้อมูลทั้งหมดเก็บในเครื่อง ไม่ต้องสมัครสมาชิก
+      <br><br>
+      <a href="./apps/wandee/index.html">ดูรายละเอียดแอป →</a>
+      &nbsp;·&nbsp;
+      <a href="./apps/wandee/support.html">ความช่วยเหลือเพิ่มเติม →</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ใช้กล้องและไมโครโฟนในแอปวันดีๆได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ได้ครับ แอปจะขอสิทธิ์เข้าถึงกล้อง คลังภาพ และไมโครโฟนเมื่อคุณใช้ฟีเจอร์เหล่านั้นครั้งแรก
+      สิทธิ์เหล่านี้ใช้เพื่อแนบรูปและบันทึกเสียงในบันทึกของคุณเท่านั้น
+      ไม่มีการอัปโหลดไปยังเซิร์ฟเวอร์ภายนอก
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       เพื่อนเตือนยา
+       ============================================================ -->
+  <div class="faq-section-title" id="pheuan">💊 เพื่อนเตือนยา</div>
+
+  <div class="app-faq-intro">
+    <img src="./apps/pheuan-tueanya/icon.png" alt="เพื่อนเตือนยา" />
+    <div>
+      <strong>เพื่อนเตือนยา</strong>
+      <span>แอปช่วยเตือนยาและบันทึกสุขภาพสำหรับผู้สูงวัย · อยู่ระหว่างทดสอบ TestFlight</span>
+    </div>
+  </div>
+
+  <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:var(--radius-sm); padding:14px 18px; margin-bottom:16px; font-size:14px; color:#9a3412; line-height:1.8;">
+    ⚕️ <strong>หมายเหตุสำคัญ:</strong> เพื่อนเตือนยาเป็นเครื่องมือช่วยเตือนและบันทึกข้อมูลเท่านั้น
+    <strong>ไม่ใช่เครื่องมือแพทย์</strong> ไม่วิเคราะห์ ไม่วินิจฉัย และไม่ให้คำปรึกษาทางการแพทย์
+    หากมีอาการผิดปกติหรือฉุกเฉิน โปรดติดต่อแพทย์ โรงพยาบาล โทร <strong>1669</strong>
+    หรือใช้เมนู SOS ในแอป
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      เพื่อนเตือนยามีฟีเจอร์อะไรบ้าง?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li>ตั้งเตือนกินยาและบันทึกว่ากินแล้ว/ข้าม</li>
+        <li>บันทึกค่าความดันและชีพจร</li>
+        <li>บันทึกความรู้สึกและอาการ</li>
+        <li>ปฏิทินนัดหมายสุขภาพพร้อมแจ้งเตือน</li>
+        <li>เมนู SOS / ผู้ติดต่อฉุกเฉิน</li>
+        <li>ส่งออก CSV/PDF เพื่อนำไปพูดคุยกับแพทย์</li>
+      </ul>
+      <a href="./apps/pheuan-tueanya/index.html">ดูรายละเอียดแอป →</a>
+      &nbsp;·&nbsp;
+      <a href="./apps/pheuan-tueanya/support.html">ความช่วยเหลือเพิ่มเติม →</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แอปเตือนยาจะวินิจฉัยโรคให้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ไม่ครับ แอปช่วยจำและบันทึกข้อมูลตามที่ผู้ใช้กรอกเท่านั้น
+      ไม่มีการวิเคราะห์ค่าความดัน ไม่แนะนำยา และไม่ตัดสินว่าค่าใดปกติหรือผิดปกติ
+      ข้อมูลที่แสดงเป็นสิ่งที่ผู้ใช้บันทึกไว้เท่านั้น
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       แก้ปัญหา
+       ============================================================ -->
+  <div class="faq-section-title" id="troubleshoot">🔧 แก้ปัญหาทั่วไป</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แอปค้างหรือปิดเอง ควรทำอย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ลองทำตามลำดับนี้:
+      <ul>
+        <li>ปิดแอปแล้วเปิดใหม่</li>
+        <li>รีสตาร์ทอุปกรณ์</li>
+        <li>ตรวจสอบว่ามีอัปเดตแอปใน App Store หรือ TestFlight หรือไม่</li>
+        <li>ถอนการติดตั้งแล้วติดตั้งใหม่ (สำรองข้อมูลก่อนหากต้องการ)</li>
+        <li>หากยังมีปัญหา ติดต่อเราทางอีเมลพร้อมระบุชื่อแอปและรุ่น iOS</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      การแจ้งเตือนไม่ทำงาน แก้ไขอย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ตรวจสอบดังนี้:
+      <ul>
+        <li>เปิดสิทธิ์การแจ้งเตือนให้แอปใน การตั้งค่า → การแจ้งเตือน</li>
+        <li>ปิดโหมดห้ามรบกวน (Do Not Disturb) หรือโฟกัสที่อาจบล็อกการแจ้งเตือน</li>
+        <li>สำหรับแอปเตือนยา/นัดหมาย — ตรวจสอบว่าตั้งเวลาเตือนในแอปแล้ว</li>
+        <li>รีสตาร์ทอุปกรณ์หากการแจ้งเตือนหยุดทำงานหลังอัปเดต iOS</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      อยากเสนอฟีเจอร์ใหม่หรือรายงานบัก ทำได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ยินดีมากครับ ทุกความคิดเห็นช่วยพัฒนาแอปให้ดีขึ้น
+      ส่งข้อเสนอแนะ ฟีเจอร์ที่อยากได้ หรือรายงานปัญหามาได้ที่
+      <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a>
+      โปรดระบุชื่อแอปและรายละเอียดให้ชัดเจน จะช่วยให้ตอบกลับได้เร็วขึ้น
+    </div>
+  </div>
+
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       ติดต่อ
+       ============================================================ -->
+  <section id="contact">
+    <div class="contact-card">
+      <h2>📧 ยังไม่พบคำตอบ?</h2>
+      <p>
+        ส่งอีเมลหาเราได้ที่
+        <a href="mailto:burapatis@gmail.com" style="font-weight:600;">burapatis@gmail.com</a>
+        โดยระบุชื่อแอปและรายละเอียดปัญหา
+        เราจะตอบกลับภายใน 7 วันทำการ
+      </p>
+      <p style="margin-top:16px;">
+        หรือเข้าไปที่หน้าความช่วยเหลือของแต่ละแอปเพื่อดูคำถามเฉพาะทาง:
+      </p>
+      <ul style="margin:12px 0 0 18px; list-style:disc; font-size:14px; line-height:2;">
+        <li><a href="./apps/banchee-witheethai/support.html">ความช่วยเหลือ — บัญชีวิถีไทย</a></li>
+        <li><a href="./apps/khaidee/support.html">ความช่วยเหลือ — ขายดี</a></li>
+        <li><a href="./apps/wandee/support.html">ความช่วยเหลือ — วันดีๆ</a></li>
+        <li><a href="./apps/pheuan-tueanya/support.html">ความช่วยเหลือ — เพื่อนเตือนยา</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="./assets/icon.png" alt="Boorapatis Apps" class="brand-icon" />
+          <span style="color:#fff; font-weight:700; font-size:15px;">Boorapatis Apps</span>
+        </div>
+        <p>
+          พัฒนาแอปพลิเคชันมือถือที่ปลอดภัย ใช้ง่าย
+          และสอดคล้องกับชีวิตประจำวันของคนไทย
+        </p>
+        <p style="margin-top:10px;">
+          📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a>
+        </p>
+      </div>
+      <div>
+        <h4>แอปพลิเคชัน</h4>
+        <ul class="footer-links">
+          <li><a href="./apps/banchee-witheethai/index.html">บัญชีวิถีไทย</a></li>
+          <li><a href="./apps/khaidee/index.html">ขายดี</a></li>
+          <li><a href="./apps/wandee/index.html">วันดีๆ</a></li>
+          <li><a href="./apps/pheuan-tueanya/index.html">เพื่อนเตือนยา</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ข้อมูลทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./faq.html">คำถามที่พบบ่อย (FAQ)</a></li>
+          <li><a href="./apps/banchee-witheethai/privacy.html">นโยบายความเป็นส่วนตัว — บัญชีวิถีไทย</a></li>
+          <li><a href="./apps/khaidee/privacy.html">นโยบายความเป็นส่วนตัว — ขายดี</a></li>
+          <li><a href="./apps/wandee/privacy.html">นโยบายความเป็นส่วนตัว — วันดีๆ</a></li>
+          <li><a href="./apps/pheuan-tueanya/privacy.html">นโยบายความเป็นส่วนตัว — เพื่อนเตือนยา</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+      <p>Made with ❤️ for Thailand</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+  document.querySelectorAll('.navbar-nav a').forEach(link => {
+    link.addEventListener('click', () => document.getElementById('navMenu').classList.remove('open'));
+  });
+
+  function toggleFaq(el) {
+    el.closest('.faq-item').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
