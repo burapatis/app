@@ -11,7 +11,7 @@
   <meta name="description" content="Boorapatis Ploysuwan — ผู้พัฒนาแอปพลิเคชันมือถือที่เน้นความปลอดภัย ใช้งานง่าย สอดคล้องกับชีวิตประจำวันคนไทย" />
 
   <!-- ✏️ [แก้ไข] คำค้นหา SEO -->
-  <meta name="keywords" content="แอปบัญชี, บัญชีรายรับรายจ่าย, แอปร้านค้า, ขายดี, บัญชีวิถีไทย, Thai app, mobile app" />
+  <meta name="keywords" content="แอปบัญชี, บัญชีรายรับรายจ่าย, แอปร้านค้า, ขายดี, บัญชีวิถีไทย, วันดีๆ, ไดอารี่ผู้สูงอายุ, Thai app, mobile app" />
   <meta name="author" content="Boorapatis Ploysuwan" />
 
   <!-- Open Graph (สำหรับแชร์ใน Social Media) -->
@@ -582,39 +582,43 @@
       </article>
       <!-- ══ จบ แอป #2 ══ -->
 
-
       <!-- ══════════════════════════════════════════════════
-           ตัวอย่าง แอป #3 — Coming Soon
-           ✏️ [แก้ไข] เมื่อมีแอปใหม่ ให้ลบ card นี้ออกและสร้าง
-           app-card จริงแทน (ดูตัวอย่างจาก แอป #1 หรือ #2)
-
-           หากต้องการเพิ่มแอปใหม่หลายตัว ให้คัดลอก block ข้างบน
-           และแทนที่ block coming-soon นี้
+           แอป #3 — วันดีๆ
            ══════════════════════════════════════════════════ -->
-      <article class="app-card coming-soon scroll-reveal delay-2">
+      <article class="app-card scroll-reveal delay-2">
         <div class="app-card-header">
-          <div class="app-icon" style="background: linear-gradient(135deg, #5f6368, #9aa0a6);">🔮</div>
+          <img src="./apps/wandee/icon.png" alt="วันดีๆ" class="app-icon" />
           <div>
-            <!-- ✏️ [แก้ไข] ชื่อแอปที่กำลังจะมา -->
-            <h3 class="app-card-name">แอปใหม่กำลังมา...</h3>
-            <p class="app-card-tagline">ยังอยู่ระหว่างการพัฒนา</p>
-            <div style="margin-top:8px;">
-              <span class="badge badge-coming">⏳ เร็วๆ นี้</span>
+            <h3 class="app-card-name">วันดีๆ</h3>
+            <p class="app-card-tagline">ไดอารี่สำหรับผู้สูงอายุไทย</p>
+            <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+              <span class="badge badge-coming">🧪 TestFlight</span>
+              <span class="badge badge-info">iOS &amp; iPadOS</span>
             </div>
           </div>
         </div>
+
         <div class="app-card-body">
-          <!-- ✏️ [แก้ไข] คำอธิบายแอปที่กำลังจะมา -->
-          <p style="font-size:14px; color:var(--text-muted); line-height:1.8;">
-            กำลังพัฒนาแอปพลิเคชันใหม่อยู่ ติดตามข่าวสารได้เร็วๆ นี้
-            หากสนใจสามารถลงทะเบียนรอรับการแจ้งเตือนได้ที่ด้านล่าง
+          <p style="font-size:14px; color:var(--text-body); margin-bottom:14px; line-height:1.8;">
+            บันทึกความทรงจำดีๆ ด้วยข้อความ ภาพถ่าย และเสียง
+            ตัวอักษรใหญ่ ใช้งานง่าย ข้อมูลทั้งหมดเก็บในเครื่องของคุณ
           </p>
+          <ul class="app-features">
+            <li>เขียนบันทึกไดอารี่รายวันได้ง่าย ไม่จำกัดความยาว</li>
+            <li>แนบรูปภาพและบันทึกเสียงแทนการพิมพ์ได้</li>
+            <li>ปฏิทินย้อนหลังและค้นหาบันทึกเก่าจากคำสำคัญ</li>
+            <li>ข้อมูลเก็บในเครื่องของคุณ — ไม่มีการส่งข้อมูลออกไปไหน</li>
+          </ul>
         </div>
+
         <div class="app-card-footer">
-          <a href="#contact" class="btn btn-outline btn-sm">แจ้งเมื่อพร้อม →</a>
+          <div class="app-card-links">
+            <a href="./apps/wandee/index.html" class="btn btn-outline btn-sm">รายละเอียด →</a>
+            <a href="./apps/wandee/support.html" class="btn btn-outline btn-sm">ช่วยเหลือ</a>
+          </div>
         </div>
       </article>
-      <!-- ══ จบ Coming Soon ══ -->
+      <!-- ══ จบ แอป #3 ══ -->
 
     </div><!-- end grid -->
   </div>
@@ -766,7 +770,7 @@
           <!-- ✏️ [แก้ไข] เพิ่ม/แก้ไขรายการแอปใน Footer ได้ที่นี่ -->
           <li><a href="./apps/banchee-witheethai/index.html">บัญชีวิถีไทย</a></li>
           <li><a href="./apps/khaidee/index.html">ขายดี</a></li>
-          <!-- ✏️ [แก้ไข] เพิ่มแอปใหม่: <li><a href="./apps/ชื่อโฟลเดอร์/index.html">ชื่อแอป</a></li> -->
+          <li><a href="./apps/wandee/index.html">วันดีๆ</a></li>
         </ul>
       </div>
 
@@ -781,6 +785,9 @@
           <li><a href="./apps/khaidee/privacy.html">นโยบายความเป็นส่วนตัว — ขายดี</a></li>
           <li><a href="./apps/khaidee/terms.html">ข้อกำหนดการใช้งาน — ขายดี</a></li>
           <li><a href="./apps/khaidee/support.html">ความช่วยเหลือ — ขายดี</a></li>
+          <li><a href="./apps/wandee/privacy.html">นโยบายความเป็นส่วนตัว — วันดีๆ</a></li>
+          <li><a href="./apps/wandee/terms.html">ข้อกำหนดการใช้งาน — วันดีๆ</a></li>
+          <li><a href="./apps/wandee/support.html">ความช่วยเหลือ — วันดีๆ</a></li>
         </ul>
       </div>
 

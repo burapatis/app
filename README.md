@@ -30,11 +30,18 @@ https://<your-username>.github.io/<your-repo-name>/
     │   ├── privacy.html                ← นโยบายความเป็นส่วนตัว
     │   ├── support.html                ← FAQ + ฟอร์มติดต่อ
     │   └── terms.html                  ← ข้อกำหนดการใช้งาน
-    └── khaidee/                        ← แอป "ขายดี"
+    ├── khaidee/                        ← แอป "ขายดี"
+    │   ├── index.html
+    │   ├── privacy.html
+    │   ├── support.html
+    │   └── terms.html
+    └── wandee/                         ← แอป "วันดีๆ"
         ├── index.html
         ├── privacy.html
         ├── support.html
-        └── terms.html
+        ├── terms.html
+        ├── icon.png
+        └── og-image.png
 ```
 
 ---
@@ -122,6 +129,9 @@ apps/
 | Support URL (บัญชีวิถีไทย) | `https://<user>.github.io/<repo>/apps/banchee-witheethai/support.html` |
 | Privacy Policy (ขายดี) | `https://<user>.github.io/<repo>/apps/khaidee/privacy.html` |
 | Support URL (ขายดี) | `https://<user>.github.io/<repo>/apps/khaidee/support.html` |
+| Privacy Policy (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/privacy.html` |
+| Support URL (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/support.html` |
+| Terms of Service (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/terms.html` |
 
 ---
 

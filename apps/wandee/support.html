@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ความช่วยเหลือ — วันดีๆ</title>
+  <meta name="description" content="คำถามที่พบบ่อยและวิธีใช้งานแอปวันดีๆ ไดอารี่สำหรับผู้สูงอายุไทย" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2d6a4f;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d1fae5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #86efac;
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .contact-card h2 {
+      color: #15803d;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #166534;
+      margin-bottom: 24px;
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #2d6a4f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./icon.png" alt="วันดีๆ" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">วันดีๆ</span>
+          <span class="brand-sub">← กลับหน้าหลักแอป</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแรก</a>
+        <a href="./privacy.html">นโยบาย</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Legal Hero -->
+<div class="legal-hero" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">วันดีๆ</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>ความช่วยเหลือ</span>
+    </div>
+    <h1>💬 ความช่วยเหลือ</h1>
+    <p>คำถามที่พบบ่อยและวิธีใช้งานแอปวันดีๆ</p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <!-- Quick Links -->
+  <div class="legal-toc">
+    <h3>หัวข้อด่วน</h3>
+    <a href="#getting-started">🚀 เริ่มต้นใช้งาน</a>
+    <a href="#diary">📝 การเขียนบันทึก</a>
+    <a href="#media">📸 รูปภาพและเสียง</a>
+    <a href="#find-browse">🔍 ค้นหาและดูบันทึกเก่า</a>
+    <a href="#settings">⚙️ การตั้งค่า</a>
+    <a href="#data">💾 ข้อมูลและความปลอดภัย</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+  <!-- ============================================================
+       FAQ: เริ่มต้นใช้งาน
+       ============================================================ -->
+  <div class="faq-section-title" id="getting-started">🚀 เริ่มต้นใช้งาน</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเปิดแอปครั้งแรกต้องทำอะไรบ้าง?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>เปิดแอปวันดีๆ จาก App Store หรือ TestFlight</li>
+        <li>แอปจะพาคุณผ่านขั้นตอนตั้งค่าเริ่มต้น เช่น ขนาดตัวอักษรที่ต้องการ</li>
+        <li>เมื่อตั้งค่าเสร็จ คุณจะเห็นหน้าหลักพร้อมเขียนบันทึกได้ทันที</li>
+        <li>ไม่ต้องสมัครสมาชิกหรือล็อกอิน — เริ่มใช้ได้เลย</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ต้องต่ออินเทอร์เน็ตไหมเพื่อใช้งาน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ไม่จำเป็นเลยครับ/ค่ะ แอปวันดีๆ ใช้งานได้เต็มรูปแบบโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต ทุกฟีเจอร์ทำงานออฟไลน์ได้ ไม่ว่าจะเป็นการเขียนบันทึก แนบรูป บันทึกเสียง หรือค้นหาบันทึกเก่า</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: การเขียนบันทึก
+       ============================================================ -->
+  <div class="faq-section-title" id="diary">📝 การเขียนบันทึก</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเพิ่มบันทึกใหม่ทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะปุ่ม <strong>"เขียนบันทึก"</strong> หรือปุ่ม <strong>+</strong> ที่หน้าหลัก</li>
+        <li>แอปจะเปิดหน้าบันทึกใหม่พร้อมวันที่ปัจจุบันโดยอัตโนมัติ</li>
+        <li>พิมพ์หรือพูดบันทึกของคุณ (ดูวิธีบันทึกเสียงในหัวข้อถัดไป)</li>
+        <li>เลือกอารมณ์ประจำวันได้ที่ด้านบน</li>
+        <li>แตะ <strong>"บันทึก"</strong> เมื่อเสร็จแล้ว</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ย้อนหลังไปเขียนบันทึกของวันที่ผ่านมาได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ได้ครับ/ค่ะ สามารถเปิดปฏิทินและเลือกวันที่ต้องการแล้วแตะ <strong>"เพิ่มบันทึก"</strong> สำหรับวันนั้นได้เลย หรือจากหน้าหลักแตะที่วันที่แสดงอยู่เพื่อเปลี่ยนวันที่ก่อนเขียน</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      แก้ไขหรือลบบันทึกที่เขียนไปแล้วได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ได้ทั้งคู่ครับ/ค่ะ เปิดบันทึกที่ต้องการ แล้วแตะปุ่ม <strong>"แก้ไข"</strong> ที่มุมขวาบนเพื่อแก้ไข หรือแตะ <strong>"ลบบันทึก"</strong> เพื่อลบออก (ระบบจะถามยืนยันก่อนลบ)</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      บันทึกอารมณ์ประจำวันทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ขณะเขียนบันทึก มีแถบเลือกอารมณ์อยู่ด้านบน แตะเลือกสัญลักษณ์ที่ตรงกับความรู้สึกของคุณในวันนั้น ตั้งแต่ดีใจมากจนถึงเศร้า สามารถดูสรุปอารมณ์ย้อนหลังได้ที่หน้า "สรุป"</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: รูปภาพและเสียง
+       ============================================================ -->
+  <div class="faq-section-title" id="media">📸 รูปภาพและเสียง</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเพิ่มรูปภาพในบันทึกทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ขณะเขียนบันทึก แตะปุ่มไอคอน <strong>📷 กล้อง</strong> หรือ <strong>🖼️ รูปภาพ</strong></li>
+        <li>เลือก "ถ่ายรูปใหม่" หรือ "เลือกจากคลังภาพ"</li>
+        <li>รูปภาพจะถูกแนบในบันทึกทันที</li>
+        <li>แตะค้างที่รูปเพื่อลบออกหากต้องการ</li>
+      </ol>
+      <p>ครั้งแรกที่ใช้งาน แอปจะขอสิทธิ์เข้าถึงกล้อง/คลังภาพ กด <strong>"อนุญาต"</strong> เพื่อใช้ฟีเจอร์นี้</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีบันทึกเสียงแทนการพิมพ์ทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ขณะเขียนบันทึก แตะปุ่มไอคอน <strong>🎤 ไมโครโฟน</strong></li>
+        <li>แตะปุ่ม <strong>"เริ่มบันทึกเสียง"</strong> แล้วพูดได้เลย</li>
+        <li>แตะ <strong>"หยุด"</strong> เมื่อพูดเสร็จ</li>
+        <li>ไฟล์เสียงจะถูกแนบในบันทึก สามารถเล่นซ้ำได้ตลอด</li>
+      </ol>
+      <p>ครั้งแรกที่ใช้งาน แอปจะขอสิทธิ์เข้าถึงไมโครโฟน กด <strong>"อนุญาต"</strong> เพื่อใช้ฟีเจอร์นี้</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ค้นหาและดูบันทึกเก่า
+       ============================================================ -->
+  <div class="faq-section-title" id="find-browse">🔍 ค้นหาและดูบันทึกเก่า</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีค้นหาบันทึกเก่าจากคำสำคัญ?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ไปที่แท็บ <strong>"ค้นหา"</strong> ที่แถบด้านล่าง</li>
+        <li>พิมพ์คำสำคัญที่ต้องการในช่องค้นหา เช่น "งานบวช" "หลาน" "เที่ยวทะเล"</li>
+        <li>แอปจะแสดงบันทึกทั้งหมดที่มีคำนั้น</li>
+        <li>แตะที่บันทึกเพื่อเปิดอ่าน</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ดูบันทึกในรูปแบบปฏิทินทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>แตะแท็บ <strong>"ปฏิทิน"</strong> ที่แถบด้านล่าง คุณจะเห็นปฏิทินรายเดือน วันที่มีบันทึกจะมีจุดสีเขียวกำกับ แตะที่วันใดก็ได้เพื่อดูบันทึกของวันนั้น</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ดูสรุปอารมณ์รายสัปดาห์หรือรายเดือนได้ที่ไหน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>แตะแท็บ <strong>"สรุป"</strong> ที่แถบด้านล่าง สามารถเลือกดูได้ทั้งแบบรายวัน รายสัปดาห์ และรายเดือน จะเห็นภาพรวมอารมณ์ความรู้สึกและจำนวนบันทึกในช่วงเวลานั้น</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: การตั้งค่า
+       ============================================================ -->
+  <div class="faq-section-title" id="settings">⚙️ การตั้งค่า</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีปรับขนาดตัวอักษรให้ใหญ่ขึ้น?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ตั้งค่า"</strong> ที่แถบด้านล่าง</li>
+        <li>เลื่อนหาหัวข้อ <strong>"ขนาดตัวอักษร"</strong></li>
+        <li>เลื่อน Slider หรือแตะปุ่ม + เพื่อเพิ่มขนาด</li>
+        <li>ตัวอย่างข้อความจะแสดงให้เห็นทันที</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีตั้งการแจ้งเตือนให้เขียนบันทึกทุกวัน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ไปที่ <strong>"ตั้งค่า"</strong> แล้วเลือก <strong>"การแจ้งเตือน"</strong></li>
+        <li>เปิดสวิตช์ <strong>"เตือนเขียนบันทึกประจำวัน"</strong></li>
+        <li>เลือกเวลาที่ต้องการให้แจ้งเตือน เช่น 20:00 น.</li>
+        <li>กด <strong>"บันทึก"</strong></li>
+      </ol>
+      <p>ครั้งแรก แอปจะขอสิทธิ์การแจ้งเตือน กด <strong>"อนุญาต"</strong> เพื่อเปิดใช้งาน</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ข้อมูลและความปลอดภัย
+       ============================================================ -->
+  <div class="faq-section-title" id="data">💾 ข้อมูลและความปลอดภัย</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ถ้าลบแอปออก บันทึกทั้งหมดหายไปด้วยไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>หากลบแอปออกจากเครื่อง ข้อมูลทั้งหมดในแอปจะถูกลบออกด้วยอย่างถาวร <strong>ยกเว้น</strong>ในกรณีที่คุณมี iCloud Backup เปิดใช้งานอยู่ — ข้อมูลจะถูกกู้คืนอัตโนมัติเมื่อติดตั้งแอปใหม่และล็อกอิน Apple ID เดิม</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      สำรองข้อมูลได้ไหม? ทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>สำรองข้อมูลได้ผ่าน <strong>iCloud Backup</strong> ของ Apple ครับ/ค่ะ วิธีเปิดใช้งาน:</p>
+      <ol class="step-list">
+        <li>ไปที่ <strong>การตั้งค่า (Settings)</strong> บน iPhone</li>
+        <li>แตะชื่อของคุณ → <strong>iCloud</strong></li>
+        <li>แตะ <strong>iCloud Backup</strong></li>
+        <li>เปิดสวิตช์ <strong>"สำรองข้อมูล iCloud"</strong></li>
+      </ol>
+      <p>หลังจากนั้น iPhone จะสำรองข้อมูลอัตโนมัติเมื่อเชื่อมต่อ Wi-Fi และที่ชาร์จ</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ข้อมูลของฉันปลอดภัยไหม? มีคนอื่นเห็นได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ปลอดภัยมากครับ/ค่ะ ข้อมูลทั้งหมดเก็บอยู่ในเครื่องของคุณเท่านั้น ไม่มีการส่งออกสู่อินเทอร์เน็ต ผู้พัฒนาก็ไม่สามารถเข้าถึงบันทึกของคุณได้เลย อ่านรายละเอียดเพิ่มเติมได้ที่ <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ทำไมแอปถึงขอสิทธิ์เข้าถึงกล้องและไมโครโฟน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>กล้องใช้สำหรับถ่ายรูปแนบในบันทึก และไมโครโฟนใช้สำหรับฟีเจอร์บันทึกเสียง ทั้งหมดทำงานในเครื่องเท่านั้น ไม่มีการส่งรูปหรือเสียงไปที่ใด หากไม่ต้องการใช้ฟีเจอร์เหล่านี้ สามารถกด "ไม่อนุญาต" ได้ ฟีเจอร์อื่นๆ ยังใช้งานได้ปกติ</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Contact Section
+       ============================================================ -->
+  <div id="contact" style="margin-top:48px;">
+    <div class="contact-card">
+      <h2>📧 ติดต่อผู้พัฒนา</h2>
+      <p>ไม่พบคำตอบที่ต้องการ? ส่งอีเมลหาเราได้เลยครับ เราตอบกลับภายใน 3–5 วันทำการ</p>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <a href="mailto:burapatis@gmail.com?subject=คำถามเกี่ยวกับแอปวันดีๆ"
+           class="btn btn-primary"
+           style="background:#2d6a4f; display:inline-flex; width:fit-content;">
+          📧 ส่งอีเมลหาเรา
+        </a>
+        <p style="font-size:14px; color:#166534; margin:0;">
+          📧 burapatis@gmail.com<br>
+          กรุณาระบุในหัวข้ออีเมลว่า <strong>"วันดีๆ"</strong> และอธิบายปัญหาพร้อมรุ่น iOS ของคุณ
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+  <p style="text-align:center; color:var(--text-muted); font-size:14px;">
+    <a href="./index.html">← กลับหน้าแอปวันดีๆ</a> &nbsp;|&nbsp;
+    <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a> &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a>
+  </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <img src="./icon.png" alt="วันดีๆ" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
+          <span style="color:#fff;font-weight:700;">วันดีๆ</span>
+        </div>
+        <p>📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></p>
+        <p style="margin-top:8px;"><a href="../../index.html" style="color:rgba(255,255,255,.55)">← กลับหน้าหลัก</a></p>
+      </div>
+      <div>
+        <h4>เอกสารทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="./terms.html">ข้อกำหนดการใช้งาน</a></li>
+          <li><a href="./support.html">ความช่วยเหลือ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ผู้พัฒนา</h4>
+        <p>Boorapatis Ploysuwan</p>
+        <ul class="footer-links" style="margin-top:8px;">
+          <li><a href="../../index.html">แอปทั้งหมด</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy Policy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
