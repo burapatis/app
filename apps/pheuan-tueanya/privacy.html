@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>นโยบายความเป็นส่วนตัว — เพื่อนเตือนยา</title>
+  <meta name="description" content="นโยบายความเป็นส่วนตัวของแอปเพื่อนเตือนยา ข้อมูลสุขภาพทั้งหมดเก็บในเครื่องเท่านั้น" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./icon.png" alt="เพื่อนเตือนยา" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">เพื่อนเตือนยา</span>
+          <span class="brand-sub">← กลับหน้าหลักแอป</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแรก</a>
+        <a href="./support.html">ช่วยเหลือ</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Legal Hero -->
+<div class="legal-hero" style="background: linear-gradient(135deg, #065f55, #0f766e);">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">เพื่อนเตือนยา</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>นโยบายความเป็นส่วนตัว</span>
+    </div>
+    <h1>🔒 นโยบายความเป็นส่วนตัว</h1>
+    <!-- ✏️ [แก้ไข] วันที่มีผลบังคับใช้ -->
+    <p>เพื่อนเตือนยา (Pheuan Tueanya) — อัปเดตล่าสุด: 6 มิถุนายน 2569</p>
+  </div>
+</div>
+
+<!-- Legal Body -->
+<div class="legal-body">
+
+  <div class="legal-toc">
+    <h3>สารบัญ</h3>
+    <a href="#overview">1. ภาพรวมนโยบาย</a>
+    <a href="#health-data">2. ข้อมูลสุขภาพและความอ่อนไหว</a>
+    <a href="#no-collect">3. ข้อมูลที่เราไม่เก็บ</a>
+    <a href="#local-data">4. ข้อมูลที่เก็บในเครื่องของคุณ</a>
+    <a href="#permissions">5. สิทธิ์การเข้าถึงที่แอปขอใช้</a>
+    <a href="#export">6. การส่งออกข้อมูล (Export)</a>
+    <a href="#data-safety">7. ความปลอดภัยและการไม่แชร์ข้อมูล</a>
+    <a href="#backup">8. การสำรองข้อมูล</a>
+    <a href="#medical-disclaimer">9. ข้อจำกัดด้านการแพทย์</a>
+    <a href="#changes">10. การเปลี่ยนแปลงนโยบาย</a>
+    <a href="#contact">11. ติดต่อเรา</a>
+  </div>
+
+  <div class="highlight-box">
+    <strong>สรุปสั้นๆ:</strong> แอปเพื่อนเตือนยาไม่เก็บข้อมูลใดๆ ของคุณ ข้อมูลสุขภาพทั้งหมดเก็บในเครื่องเท่านั้น
+    ไม่ส่งออกโดยอัตโนมัติ ผู้พัฒนาไม่สามารถเข้าถึงข้อมูลของคุณได้ไม่ว่ากรณีใด
+  </div>
+
+  <h2 id="overview">1. ภาพรวมนโยบาย</h2>
+  <p>Boorapatis Ploysuwan ("เรา", "ผู้พัฒนา") ให้ความสำคัญสูงสุดกับความเป็นส่วนตัวของผู้ใช้แอปพลิเคชัน <strong>เพื่อนเตือนยา (Pheuan Tueanya)</strong> ("แอป") โดยเฉพาะอย่างยิ่งเนื่องจากแอปเกี่ยวข้องกับข้อมูลสุขภาพซึ่งเป็นข้อมูลที่อ่อนไหวมาก</p>
+  <p>แอปเพื่อนเตือนยาออกแบบตามหลัก <strong>Local-first</strong> หมายความว่าข้อมูลทั้งหมดอยู่ในเครื่องของผู้ใช้ ไม่ต้องสมัครสมาชิก ไม่มีระบบ Login ไม่มี Backend และไม่มี Cloud Sync</p>
+
+  <h2 id="health-data">2. ข้อมูลสุขภาพและความอ่อนไหว</h2>
+  <p>ข้อมูลที่ผู้ใช้บันทึกในแอปเพื่อนเตือนยาถือเป็น <strong>ข้อมูลสุขภาพที่อ่อนไหว</strong> (Sensitive Health Data) ได้แก่:</p>
+  <ul>
+    <li>รายการยาและปริมาณที่รับประทาน</li>
+    <li>ค่าความดันโลหิต (SYS, DIA) และชีพจร</li>
+    <li>ความรู้สึกและอาการประจำวัน</li>
+    <li>ประวัติการกินยา</li>
+    <li>ข้อมูลนัดหมายสุขภาพ</li>
+    <li>ข้อมูลผู้ติดต่อฉุกเฉิน</li>
+  </ul>
+  <p>ข้อมูลเหล่านี้มีความอ่อนไหวสูง ผู้พัฒนาจึงออกแบบให้ข้อมูลทั้งหมดเก็บอยู่ในเครื่องของผู้ใช้เท่านั้น โดยผู้พัฒนาไม่สามารถเข้าถึงหรือประมวลผลข้อมูลเหล่านี้ได้ไม่ว่ากรณีใดทั้งสิ้น</p>
+
+  <h2 id="no-collect">3. ข้อมูลที่เราไม่เก็บ</h2>
+  <p>แอปเพื่อนเตือนยา <strong>ไม่เก็บ ไม่รับ ไม่ส่ง และไม่แชร์</strong>ข้อมูลต่อไปนี้ไม่ว่ากรณีใดทั้งสิ้น:</p>
+  <ul>
+    <li>ชื่อ-นามสกุล ที่อยู่ หรือข้อมูลติดต่อส่วนตัว</li>
+    <li>รายการยาและประวัติการกินยา</li>
+    <li>ค่าความดันโลหิตและชีพจร</li>
+    <li>ข้อมูลอาการและความรู้สึก</li>
+    <li>ข้อมูลนัดหมายสุขภาพ</li>
+    <li>ข้อมูลผู้ติดต่อฉุกเฉิน (ชื่อและเบอร์โทร)</li>
+    <li>ข้อมูลตำแหน่งที่ตั้ง (GPS)</li>
+    <li>ประวัติการใช้งานหรือ Analytics</li>
+    <li>ข้อมูลระบุตัวตนของอุปกรณ์ (Device ID, IDFA)</li>
+    <li>ข้อมูลทางการเงิน</li>
+  </ul>
+
+  <div class="info-box">
+    <strong>หมายเหตุ:</strong> แอปเพื่อนเตือนยาไม่มีระบบสมัครสมาชิก ไม่มี Login และไม่มี Account ผู้ใช้งาน
+    ทำให้ไม่มีข้อมูลใดถูกส่งไปยังเซิร์ฟเวอร์ของเราเลย
+  </div>
+
+  <h2 id="local-data">4. ข้อมูลที่เก็บในเครื่องของคุณ</h2>
+  <p>ข้อมูลทั้งหมดที่คุณบันทึกในแอปเก็บอยู่ใน <strong>เครื่อง iPhone หรือ iPad ของคุณเท่านั้น</strong> ผ่านระบบ Core Data ของ iOS:</p>
+  <ul>
+    <li>รายการยาและการตั้งค่าเวลาเตือน</li>
+    <li>ประวัติการกินยา (กินแล้ว / ข้าม)</li>
+    <li>ค่าความดันโลหิตและชีพจร พร้อมวันเวลาที่บันทึก</li>
+    <li>บันทึกความรู้สึกและอาการประจำวัน</li>
+    <li>ข้อมูลนัดหมายสุขภาพ</li>
+    <li>รายชื่อผู้ติดต่อฉุกเฉิน</li>
+    <li>การตั้งค่าแอป (ขนาดตัวอักษร, ธีม, การแจ้งเตือน)</li>
+  </ul>
+  <p><strong>สำคัญ:</strong> หากคุณลบแอปออกจากเครื่อง ข้อมูลทั้งหมดจะถูกลบอย่างถาวร ยกเว้นกรณีที่มี iCloud Backup</p>
+
+  <h2 id="permissions">5. สิทธิ์การเข้าถึงที่แอปขอใช้</h2>
+  <p>แอปอาจขอสิทธิ์เข้าถึงฟีเจอร์ต่อไปนี้ ทั้งหมดทำงานในเครื่องและเพื่อประโยชน์ของคุณโดยตรง:</p>
+
+  <h3>🔔 การแจ้งเตือน (Notifications) — จำเป็น</h3>
+  <p>ใช้สำหรับการแจ้งเตือนยาตามเวลาที่ตั้งไว้ และการแจ้งเตือนนัดหมายสุขภาพล่วงหน้า
+  การแจ้งเตือนทั้งหมดทำงานในเครื่องผ่านระบบ Local Notifications ไม่ผ่านเซิร์ฟเวอร์ใดๆ</p>
+
+  <h3>📞 โทรศัพท์ — สำหรับ SOS เท่านั้น</h3>
+  <p>เมื่อกดปุ่ม SOS แอปจะเปิดแอปโทรศัพท์พร้อมหมายเลขผู้ติดต่อที่คุณตั้งไว้
+  แอปไม่ได้โทรออกโดยอัตโนมัติ ระบบจะแสดงข้อความยืนยันก่อนเสมอ</p>
+
+  <h3>📤 การแชร์ไฟล์ — สำหรับส่งออกข้อมูลเท่านั้น (ไม่บังคับ)</h3>
+  <p>เมื่อคุณกดส่งออกข้อมูล (CSV หรือ PDF) แอปจะใช้ระบบ Share Sheet ของ iOS เพื่อให้คุณเลือกส่งไปที่ใด
+  การส่งออกต้องเกิดจากคุณกดเองเท่านั้น แอปไม่ส่งออกข้อมูลโดยอัตโนมัติ</p>
+
+  <p style="margin-top:16px;">คุณสามารถเพิกถอนสิทธิ์ใดๆ ได้ตลอดเวลาที่ <strong>การตั้งค่า → เพื่อนเตือนยา</strong> บน iPhone/iPad</p>
+
+  <h2 id="export">6. การส่งออกข้อมูล (Export)</h2>
+  <p>แอปมีฟีเจอร์ส่งออกข้อมูลในรูปแบบ:</p>
+  <ul>
+    <li>CSV รายหมวด (ยา, ความดัน, อาการ)</li>
+    <li>PDF สรุปสุขภาพ 30 วัน</li>
+  </ul>
+  <p>การส่งออก <strong>ต้องเกิดจากผู้ใช้กดเองเท่านั้น</strong> แอปไม่มีการส่งออกข้อมูลโดยอัตโนมัติ
+  เมื่อส่งออกแล้ว ไฟล์จะอยู่ภายใต้การควบคุมของผู้ใช้ ผู้พัฒนาไม่สามารถเข้าถึงไฟล์ที่ส่งออกได้</p>
+
+  <h2 id="data-safety">7. ความปลอดภัยและการไม่แชร์ข้อมูล</h2>
+  <ul>
+    <li>✅ ไม่มีการเชื่อมต่ออินเทอร์เน็ตสำหรับข้อมูลส่วนตัว</li>
+    <li>✅ ไม่มี Analytics SDK, Crash Reporting, หรือ Tracking ใดๆ</li>
+    <li>✅ ไม่มีโฆษณา (Ad-Free)</li>
+    <li>✅ ไม่มีการขาย แชร์ หรือส่งข้อมูลสุขภาพให้บุคคลที่สาม</li>
+    <li>✅ ไม่มีการวิเคราะห์หรือประมวลผลข้อมูลสุขภาพบนเซิร์ฟเวอร์</li>
+    <li>✅ ไม่มี Account ผู้ใช้ ไม่มีระบบ Login</li>
+    <li>✅ ข้อมูลในเครื่องปกป้องโดยระบบความปลอดภัยของ iOS</li>
+    <li>✅ ผู้พัฒนาไม่สามารถเข้าถึงข้อมูลสุขภาพของคุณได้ไม่ว่ากรณีใด</li>
+  </ul>
+
+  <h2 id="backup">8. การสำรองข้อมูล</h2>
+  <p>สามารถสำรองข้อมูลได้ผ่าน iCloud Backup ของ Apple วิธีเปิดใช้งาน:</p>
+  <p>ไปที่ <strong>การตั้งค่า → ชื่อของคุณ → iCloud → iCloud Backup → เปิดใช้งาน</strong></p>
+  <p>iPhone จะสำรองข้อมูลอัตโนมัติเมื่อเชื่อมต่อ Wi-Fi และอยู่ที่จุดชาร์จ
+  ข้อมูล iCloud ได้รับการเข้ารหัสและปกป้องโดย Apple ตามนโยบายของ Apple</p>
+
+  <div class="info-box">
+    <strong>คำแนะนำ:</strong> เนื่องจากข้อมูลยาและสุขภาพมีความสำคัญ ขอแนะนำให้เปิด iCloud Backup เพื่อป้องกันข้อมูลสูญหายกรณีเปลี่ยนเครื่องหรือเครื่องเสียหาย
+  </div>
+
+  <h2 id="medical-disclaimer">9. ข้อจำกัดด้านการแพทย์</h2>
+  <div style="background:#fff7ed; border:2px solid #f97316; border-radius:10px; padding:20px 24px; margin:8px 0 16px;">
+    <p style="color:#7c2d12; margin:0; line-height:1.9;">
+      <strong>⚕️ สำคัญมาก:</strong> แอปเพื่อนเตือนยาเป็น<strong>เครื่องมือช่วยเตือนและบันทึกข้อมูลเท่านั้น</strong>
+      ไม่ใช่เครื่องมือแพทย์ ไม่วิเคราะห์โรค ไม่วินิจฉัยโรค ไม่ให้คำแนะนำแทนแพทย์
+      และไม่ใช่ระบบฉุกเฉินอัตโนมัติ<br><br>
+      ข้อมูลที่แอปแสดงเป็นเพียงข้อมูลที่ผู้ใช้บันทึกเอง ไม่ได้ผ่านการประมวลผลทางการแพทย์<br><br>
+      <strong>หากมีอาการผิดปกติหรือฉุกเฉิน โปรดติดต่อแพทย์ โรงพยาบาล โทร 1669 หรือผู้ติดต่อฉุกเฉินทันที</strong>
+    </p>
+  </div>
+
+  <h2 id="changes">10. การเปลี่ยนแปลงนโยบาย</h2>
+  <p>หากมีการเปลี่ยนแปลง จะมีการแจ้งผ่านการอัปเดตแอปและหน้าเว็บนี้ วันที่ "อัปเดตล่าสุด" จะเปลี่ยนไป การใช้งานแอปต่อไปถือว่ายอมรับนโยบายที่เปลี่ยนแปลง</p>
+
+  <h2 id="contact">11. ติดต่อเรา</h2>
+  <p>หากมีคำถามเกี่ยวกับนโยบายนี้ หรือมีข้อกังวลเกี่ยวกับความเป็นส่วนตัวของข้อมูลสุขภาพ ติดต่อได้ที่:</p>
+  <ul>
+    <li>📧 อีเมล: <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></li>
+    <li>🌐 หน้าสนับสนุน: <a href="./support.html">Pheuan Tueanya Support</a></li>
+  </ul>
+  <p>เราจะตอบกลับภายใน 3–5 วันทำการ</p>
+
+  <hr class="divider" />
+  <p style="text-align:center; color:var(--text-muted); font-size:14px;">
+    <a href="./index.html">← กลับหน้าแอปเพื่อนเตือนยา</a> &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a> &nbsp;|&nbsp;
+    <a href="./support.html">ช่วยเหลือ</a>
+  </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <img src="./icon.png" alt="เพื่อนเตือนยา" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
+          <span style="color:#fff;font-weight:700;">เพื่อนเตือนยา</span>
+        </div>
+        <p>📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></p>
+        <p style="margin-top:8px;"><a href="../../index.html" style="color:rgba(255,255,255,.55)">← กลับหน้าหลัก</a></p>
+      </div>
+      <div>
+        <h4>เอกสารทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="./terms.html">ข้อกำหนดการใช้งาน</a></li>
+          <li><a href="./support.html">ความช่วยเหลือ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ผู้พัฒนา</h4>
+        <p>Boorapatis Ploysuwan</p>
+        <ul class="footer-links" style="margin-top:8px;">
+          <li><a href="../../index.html">แอปทั้งหมด</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy Policy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+</script>
+</body>
+</html>

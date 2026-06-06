@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ความช่วยเหลือ — เพื่อนเตือนยา</title>
+  <meta name="description" content="คำถามที่พบบ่อยและวิธีใช้งานแอปเพื่อนเตือนยา แอปช่วยเตือนยาและบันทึกสุขภาพสำหรับผู้สูงวัย" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f766e;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ccfbf1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+      border: 1px solid #5eead4;
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .contact-card h2 { color: #0f766e; margin-bottom: 8px; }
+    .contact-card p  { color: #134e4a; margin-bottom: 24px; }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .emergency-box {
+      background: #fef2f2;
+      border: 2px solid #f87171;
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #991b1b;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./icon.png" alt="เพื่อนเตือนยา" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">เพื่อนเตือนยา</span>
+          <span class="brand-sub">← กลับหน้าหลักแอป</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแรก</a>
+        <a href="./privacy.html">นโยบาย</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Legal Hero -->
+<div class="legal-hero" style="background: linear-gradient(135deg, #065f55, #0f766e);">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">เพื่อนเตือนยา</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>ความช่วยเหลือ</span>
+    </div>
+    <h1>💬 ความช่วยเหลือ</h1>
+    <p>คำถามที่พบบ่อยและวิธีใช้งานแอปเพื่อนเตือนยา</p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <!-- Quick Links -->
+  <div class="legal-toc">
+    <h3>หัวข้อด่วน</h3>
+    <a href="#getting-started">🚀 เริ่มต้นใช้งาน</a>
+    <a href="#medicine">💊 เตือนยา</a>
+    <a href="#bloodpressure">🩺 บันทึกความดัน</a>
+    <a href="#symptoms">😊 ความรู้สึกและอาการ</a>
+    <a href="#calendar">📅 ปฏิทินสุขภาพ</a>
+    <a href="#sos">🆘 SOS / ผู้ติดต่อ</a>
+    <a href="#export">📤 ส่งออกข้อมูล</a>
+    <a href="#data">💾 ข้อมูลและความปลอดภัย</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+  <div class="emergency-box">
+    ⚕️ <strong>หมายเหตุสำคัญ:</strong> แอปนี้เป็นเครื่องมือช่วยเตือนและบันทึกข้อมูลเท่านั้น ไม่ใช่เครื่องมือแพทย์
+    ไม่วิเคราะห์โรค ไม่วินิจฉัยโรค หากมีอาการผิดปกติหรือฉุกเฉิน
+    โปรดติดต่อแพทย์ โรงพยาบาล โทร <strong>1669</strong> หรือกดปุ่ม SOS ในแอปทันที
+  </div>
+
+  <!-- ============================================================
+       FAQ: เริ่มต้นใช้งาน
+       ============================================================ -->
+  <div class="faq-section-title" id="getting-started">🚀 เริ่มต้นใช้งาน</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      เปิดแอปครั้งแรกต้องทำอะไรบ้าง?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>เปิดแอปเพื่อนเตือนยาจาก App Store หรือ TestFlight</li>
+        <li>อ่านและยอมรับข้อตกลงการใช้งาน (สำคัญ — แอปนี้ไม่ใช่เครื่องมือแพทย์)</li>
+        <li>ตั้งค่าขนาดตัวอักษรที่ต้องการ</li>
+        <li>เริ่มเพิ่มรายการยาและผู้ติดต่อฉุกเฉินได้เลย ไม่ต้องสมัครสมาชิก</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ต้องต่ออินเทอร์เน็ตไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ไม่จำเป็นเลยครับ/ค่ะ แอปใช้งานได้ออฟไลน์เต็มรูปแบบ ทั้งการตั้งเตือนยา บันทึกความดัน ดูปฏิทิน และกด SOS ทุกอย่างทำงานในเครื่องของคุณ</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: เตือนยา
+       ============================================================ -->
+  <div class="faq-section-title" id="medicine">💊 เตือนยา</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเพิ่มยาและตั้งเวลาเตือนทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ยา"</strong> หรือปุ่ม <strong>"เพิ่มยา"</strong></li>
+        <li>กรอกชื่อยา เลือกรูปแบบยา (เม็ด ผง น้ำ) และปริมาณ</li>
+        <li>เลือกเวลาที่ต้องการเตือน — สามารถตั้งได้หลายเวลาต่อวัน</li>
+        <li>กด <strong>"บันทึก"</strong> — แอปจะตั้งการแจ้งเตือนอัตโนมัติ</li>
+      </ol>
+      <p>ครั้งแรก แอปจะขอสิทธิ์การแจ้งเตือน กด <strong>"อนุญาต"</strong> เพื่อให้การเตือนยาทำงานได้</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      เมื่อได้รับการแจ้งเตือนยา ต้องทำอะไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>เมื่อมีการแจ้งเตือน คุณสามารถเลือก 3 ตัวเลือก:</p>
+      <ul>
+        <li>✅ <strong>กินแล้ว</strong> — บันทึกว่ากินยาเรียบร้อย</li>
+        <li>⏭️ <strong>ข้าม</strong> — บันทึกว่าข้ามมื้อนี้</li>
+        <li>⏰ <strong>เตือนอีก 10 นาที</strong> — เลื่อนเตือนออกไปอีก 10 นาที</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ลืมกดว่ากินยาแล้ว แก้ไขได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ได้ครับ/ค่ะ ไปที่แท็บ <strong>"ยา"</strong> แล้วเลื่อนดูรายการยาของวันนั้น แตะที่รายการยาที่ต้องการเพื่อแก้ไขสถานะ หรือดูจากหน้า <strong>"ประวัติ"</strong> แล้วแก้ไขสถานะที่ต้องการ</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ความดัน
+       ============================================================ -->
+  <div class="faq-section-title" id="bloodpressure">🩺 บันทึกความดัน</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีบันทึกค่าความดันทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ความดัน"</strong></li>
+        <li>แตะปุ่ม <strong>"บันทึกใหม่"</strong></li>
+        <li>กรอกค่า SYS (ความดันตัวบน), DIA (ความดันตัวล่าง) และชีพจร</li>
+        <li>วันเวลาจะถูกบันทึกอัตโนมัติ หรือแก้ไขได้หากต้องการ</li>
+        <li>กด <strong>"บันทึก"</strong></li>
+      </ol>
+      <div style="background:#fef3c7; border:1px solid #fcd34d; border-radius:8px; padding:12px 16px; margin-top:8px; font-size:14px; color:#92400e;">
+        💡 แอปบันทึกข้อมูลที่คุณกรอกเท่านั้น ไม่ได้เชื่อมต่อกับเครื่องวัดความดันโดยตรง
+        กรุณากรอกค่าจากเครื่องวัดด้วยตนเอง
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ดูประวัติความดันย้อนหลังได้ที่ไหน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ในแท็บ <strong>"ความดัน"</strong> จะแสดงรายการบันทึกทั้งหมดเรียงตามวันเวลา สามารถดูกราฟแนวโน้มและส่งออกเป็นไฟล์เพื่อนำไปให้แพทย์ดูได้</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ความรู้สึกและอาการ
+       ============================================================ -->
+  <div class="faq-section-title" id="symptoms">😊 ความรู้สึกและอาการ</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีบันทึกความรู้สึกและอาการประจำวัน?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ความรู้สึก"</strong></li>
+        <li>เลือกความรู้สึกวันนี้ เช่น สบายดีมาก / ปกติ / ไม่ค่อยสบาย</li>
+        <li>เลือกอาการที่พบ เช่น ไม่มีอาการ / เวียนหัว / ปวดหัว / เหนื่อย / นอนไม่หลับ</li>
+        <li>กด <strong>"บันทึก"</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ถ้าเลือกอาการรุนแรง แอปจะทำอะไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>หากเลือกอาการรุนแรง แอปจะแสดงข้อความแจ้งเตือนให้ <strong>ติดต่อแพทย์ โรงพยาบาล โทร 1669 หรือกดปุ่ม SOS</strong> ทันที แอปจะไม่วิเคราะห์หรือวินิจฉัยอาการแทนแพทย์</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ปฏิทินสุขภาพ
+       ============================================================ -->
+  <div class="faq-section-title" id="calendar">📅 ปฏิทินสุขภาพ</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเพิ่มนัดหมายสุขภาพทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ปฏิทิน"</strong></li>
+        <li>แตะปุ่ม <strong>"เพิ่มนัดหมาย"</strong> หรือแตะที่วันที่ต้องการ</li>
+        <li>เลือกประเภทนัดหมาย เช่น พบแพทย์ รับยา ตรวจเลือด ฉีดวัคซีน</li>
+        <li>กรอกรายละเอียดเพิ่มเติม และตั้งการแจ้งเตือนล่วงหน้า (เช่น 1 วัน / 2 ชั่วโมง)</li>
+        <li>กด <strong>"บันทึก"</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: SOS
+       ============================================================ -->
+  <div class="faq-section-title" id="sos">🆘 SOS / ผู้ติดต่อ</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      วิธีเพิ่มผู้ติดต่อฉุกเฉินทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะแท็บ <strong>"ผู้ติดต่อ"</strong> หรือ <strong>"SOS"</strong></li>
+        <li>แตะปุ่ม <strong>"เพิ่มผู้ติดต่อ"</strong></li>
+        <li>กรอกชื่อและเบอร์โทรศัพท์ เลือกความสัมพันธ์ (ลูก ญาติ ผู้ดูแล เพื่อนบ้าน)</li>
+        <li>สามารถตั้งเป็น <strong>"ผู้ติดต่อหลัก"</strong> เพื่อให้แสดงโดดเด่นบนหน้า SOS</li>
+        <li>กด <strong>"บันทึก"</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      กดปุ่ม SOS แล้วจะเกิดอะไรขึ้น?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>เมื่อกดปุ่ม SOS แอปจะแสดงข้อความยืนยันก่อนเสมอ จากนั้นหากยืนยัน แอปจะเปิดแอปโทรศัพท์พร้อมหมายเลขผู้ติดต่อที่คุณเลือก</p>
+      <div class="emergency-box">
+        ⚠️ แอปเพื่อนเตือนยาไม่ใช่ระบบฉุกเฉินอัตโนมัติ ไม่โทรออกเองโดยอัตโนมัติ
+        สำหรับเหตุฉุกเฉินทางการแพทย์ โปรดโทร <strong>1669</strong> โดยตรง
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ส่งออกข้อมูล
+       ============================================================ -->
+  <div class="faq-section-title" id="export">📤 ส่งออกข้อมูล</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ส่งออกข้อมูลเพื่อนำไปให้แพทย์ทำอย่างไร?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ไปที่ <strong>"ตั้งค่า"</strong> แล้วเลือก <strong>"ส่งออกข้อมูล"</strong></li>
+        <li>เลือกรูปแบบ: <strong>CSV รายหมวด</strong> (ยา, ความดัน, อาการ) หรือ <strong>PDF สรุปสุขภาพ 30 วัน</strong></li>
+        <li>แตะ <strong>"ส่งออก"</strong> — ระบบจะเปิดหน้าต่าง Share ของ iOS</li>
+        <li>เลือกว่าจะส่งทาง LINE อีเมล หรือบันทึกลงเครื่อง เพื่อนำไปให้แพทย์</li>
+      </ol>
+      <p>การส่งออกทุกครั้งต้องเกิดจากคุณกดเองเสมอ แอปไม่ส่งข้อมูลออกโดยอัตโนมัติ</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FAQ: ข้อมูลและความปลอดภัย
+       ============================================================ -->
+  <div class="faq-section-title" id="data">💾 ข้อมูลและความปลอดภัย</div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ข้อมูลยาและความดันของฉันปลอดภัยไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ปลอดภัยมากครับ/ค่ะ ข้อมูลสุขภาพทั้งหมดเก็บอยู่ในเครื่องของคุณเท่านั้น ไม่มีการส่งออกสู่อินเทอร์เน็ตโดยอัตโนมัติ ไม่มี Cloud ไม่มี Backend ผู้พัฒนาไม่สามารถเข้าถึงข้อมูลของคุณได้เลย อ่านรายละเอียดที่ <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      ถ้าลบแอปออก ข้อมูลหายไปไหม? สำรองได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <p>ถ้าลบแอปโดยไม่ได้สำรองข้อมูล ข้อมูลจะหายถาวร วิธีสำรอง คือ เปิด <strong>iCloud Backup</strong>:</p>
+      <ol class="step-list">
+        <li>ไปที่ <strong>การตั้งค่า → ชื่อของคุณ → iCloud → iCloud Backup</strong></li>
+        <li>เปิดสวิตช์ <strong>"สำรองข้อมูล iCloud"</strong></li>
+        <li>iPhone จะสำรองข้อมูลอัตโนมัติเมื่อต่อ Wi-Fi และที่ชาร์จ</li>
+      </ol>
+      <p>นอกจากนี้ สามารถลบข้อมูลทั้งหมดได้เองที่ <strong>ตั้งค่า → ล้างข้อมูลทั้งหมด</strong></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      แอปนี้ใช้แทนแพทย์หรือยาได้ไหม?
+      <span class="faq-arrow">▾</span>
+    </div>
+    <div class="faq-answer">
+      <div class="emergency-box">
+        <strong>ไม่ได้</strong> แอปเพื่อนเตือนยาเป็นเพียงเครื่องมือช่วยเตือนและบันทึกข้อมูลเท่านั้น
+        ไม่ใช่เครื่องมือแพทย์ ไม่วิเคราะห์โรค ไม่วินิจฉัยโรค และไม่ให้คำแนะนำแทนแพทย์
+        การปรับยาหรือหยุดยาต้องปรึกษาแพทย์ผู้รักษาเสมอ
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Contact Section
+       ============================================================ -->
+  <div id="contact" style="margin-top:48px;">
+    <div class="contact-card">
+      <h2>📧 ติดต่อผู้พัฒนา</h2>
+      <p>ไม่พบคำตอบที่ต้องการ? ส่งอีเมลหาเราได้เลย เราตอบกลับภายใน 3–5 วันทำการ</p>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <a href="mailto:burapatis@gmail.com?subject=คำถามเกี่ยวกับแอปเพื่อนเตือนยา"
+           class="btn btn-primary"
+           style="background:#0f766e; display:inline-flex; width:fit-content;">
+          📧 ส่งอีเมลหาเรา
+        </a>
+        <p style="font-size:14px; color:#134e4a; margin:0;">
+          📧 burapatis@gmail.com<br>
+          กรุณาระบุในหัวข้ออีเมลว่า <strong>"เพื่อนเตือนยา"</strong> และอธิบายปัญหาพร้อมรุ่น iOS ของคุณ
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+  <p style="text-align:center; color:var(--text-muted); font-size:14px;">
+    <a href="./index.html">← กลับหน้าแอปเพื่อนเตือนยา</a> &nbsp;|&nbsp;
+    <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a> &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a>
+  </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <img src="./icon.png" alt="เพื่อนเตือนยา" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
+          <span style="color:#fff;font-weight:700;">เพื่อนเตือนยา</span>
+        </div>
+        <p>📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></p>
+        <p style="margin-top:8px;"><a href="../../index.html" style="color:rgba(255,255,255,.55)">← กลับหน้าหลัก</a></p>
+      </div>
+      <div>
+        <h4>เอกสารทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="./terms.html">ข้อกำหนดการใช้งาน</a></li>
+          <li><a href="./support.html">ความช่วยเหลือ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ผู้พัฒนา</h4>
+        <p>Boorapatis Ploysuwan</p>
+        <ul class="footer-links" style="margin-top:8px;">
+          <li><a href="../../index.html">แอปทั้งหมด</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy Policy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

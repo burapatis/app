@@ -35,7 +35,14 @@ https://<your-username>.github.io/<your-repo-name>/
     │   ├── privacy.html
     │   ├── support.html
     │   └── terms.html
-    └── wandee/                         ← แอป "วันดีๆ"
+    ├── wandee/                         ← แอป "วันดีๆ"
+    │   ├── index.html
+    │   ├── privacy.html
+    │   ├── support.html
+    │   ├── terms.html
+    │   ├── icon.png
+    │   └── og-image.png
+    └── pheuan-tueanya/                 ← แอป "เพื่อนเตือนยา"
         ├── index.html
         ├── privacy.html
         ├── support.html
@@ -132,6 +139,9 @@ apps/
 | Privacy Policy (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/privacy.html` |
 | Support URL (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/support.html` |
 | Terms of Service (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/terms.html` |
+| Privacy Policy (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/privacy.html` |
+| Support URL (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/support.html` |
+| Terms of Service (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/terms.html` |
 
 ---
 
