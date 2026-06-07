@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ความช่วยเหลือ — เพื่อนเตือนเอกสาร</title>
+  <meta name="description" content="คำถามที่พบบ่อยและวิธีใช้งานแอปเพื่อนเตือนเอกสาร (Doc Reminder)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #4338ca;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e0e7ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border: 1px solid #a5b4fc;
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .contact-card h2 { color: #4338ca; margin-bottom: 8px; }
+    .contact-card p  { color: #3730a3; margin-bottom: 24px; }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #4338ca;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./icon.png" alt="เพื่อนเตือนเอกสาร" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">เพื่อนเตือนเอกสาร</span>
+          <span class="brand-sub">← กลับหน้าหลักแอป</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแรก</a>
+        <a href="./privacy.html">นโยบาย</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="legal-hero" style="background: linear-gradient(135deg, #312e81, #4338ca);">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">เพื่อนเตือนเอกสาร</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>ความช่วยเหลือ</span>
+    </div>
+    <h1>💬 ความช่วยเหลือ</h1>
+    <p>คำถามที่พบบ่อยและวิธีใช้งานเพื่อนเตือนเอกสาร</p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <div class="legal-toc">
+    <h3>หัวข้อด่วน</h3>
+    <a href="#getting-started">🚀 เริ่มต้นใช้งาน</a>
+    <a href="#reminders">📋 เพิ่ม/แก้ไข/ลบรายการ</a>
+    <a href="#notifications">🔔 การแจ้งเตือน</a>
+    <a href="#search">🔍 ค้นหาและกรอง</a>
+    <a href="#export">📤 ส่งออก CSV/PDF</a>
+    <a href="#data">💾 ข้อมูลและความปลอดภัย</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+  <div style="background:#ede9fe; border:1px solid #a5b4fc; border-radius:10px; padding:16px 20px; margin-bottom:24px; font-size:14px; color:#3730a3; line-height:1.8;">
+    📌 <strong>หมายเหตุ:</strong> เพื่อนเตือนเอกสารเป็นเครื่องมือช่วยบันทึกและเตือนเท่านั้น
+    ไม่ใช่บริการทางกฎหมาย การเงิน ราชการ หรือประกันภัย
+    การต่ออายุเอกสารทุกประเภทต้องดำเนินการกับหน่วยงานที่เกี่ยวข้องด้วยตนเอง
+  </div>
+
+  <div class="faq-section-title" id="getting-started">🚀 เริ่มต้นใช้งาน</div>
+
+  <div class="faq-item">
+    <div class="faq-question">เปิดแอปครั้งแรกต้องทำอะไร?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>เปิดแอปเพื่อนเตือนเอกสารจาก App Store หรือ TestFlight</li>
+        <li>อ่านข้อตกลงการใช้งานสั้นๆ แล้วยืนยัน</li>
+        <li>แตะปุ่ม <strong>"เพิ่มรายการ"</strong> เพื่อเริ่มบันทึกรายการแรก</li>
+        <li>ไม่ต้องสมัครสมาชิกหรือ Login — ใช้ได้เลย</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">ต้องเชื่อมต่ออินเทอร์เน็ตไหม?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ไม่จำเป็นเลยครับ/ค่ะ ใช้งานได้ออฟไลน์เต็มรูปแบบ ทั้งบันทึก แก้ไข ค้นหา รับการแจ้งเตือน และส่งออก ทุกอย่างทำงานในเครื่องทั้งหมด</p>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="reminders">📋 เพิ่ม/แก้ไข/ลบรายการ</div>
+
+  <div class="faq-item">
+    <div class="faq-question">วิธีเพิ่มรายการใหม่ทำอย่างไร?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>แตะปุ่ม <strong>"+"</strong> หรือ <strong>"เพิ่มรายการ"</strong> บนหน้าหลัก</li>
+        <li>กรอกชื่อรายการ เช่น "พ.ร.บ. รถยนต์ทะเบียน xxxx"</li>
+        <li>เลือกหมวดหมู่ที่เหมาะสม</li>
+        <li>เลือกวันครบกำหนด</li>
+        <li>เลือกจำนวนวันที่ต้องการเตือนล่วงหน้า</li>
+        <li>เพิ่มหมายเหตุหากต้องการ แล้วกด <strong>"บันทึก"</strong></li>
+      </ol>
+      <p>หากกดกลับโดยยังไม่บันทึก แอปจะแสดง dialog ถามก่อนออกเสมอ</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">บันทึกโดยไม่ตั้งเตือนล่วงหน้าได้ไหม?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ได้ครับ/ค่ะ หากไม่เลือกวันเตือนล่วงหน้า แอปจะแสดง dialog ยืนยันก่อน หากยืนยัน แอปจะบันทึกรายการโดยไม่มีการแจ้งเตือน</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">วิธีแก้ไขและลบรายการ?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p><strong>แก้ไข:</strong> แตะที่รายการเพื่อเข้าหน้ารายละเอียด แตะ <strong>"แก้ไข"</strong> แก้ไขข้อมูล แล้วกด <strong>"บันทึก"</strong> แอปจะอัปเดตการแจ้งเตือนให้อัตโนมัติ</p>
+      <p><strong>ลบ:</strong> เข้าหน้ารายละเอียด แตะ <strong>"ลบรายการ"</strong> แอปจะแสดง dialog ยืนยันพร้อมชื่อรายการก่อนเสมอ</p>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="notifications">🔔 การแจ้งเตือน</div>
+
+  <div class="faq-item">
+    <div class="faq-question">ตั้งเตือนล่วงหน้าได้กี่วันบ้าง?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>สามารถเลือกได้หลายช่วง เช่น 90, 60, 30, 14, 7 หรือ 3 วันก่อนถึงวันครบกำหนด และเลือกได้มากกว่าหนึ่งช่วงต่อรายการ เช่น เตือนทั้ง 30 วันและ 7 วันก่อน</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">แจ้งเตือนไม่มา ทำอย่างไร?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ตรวจสอบสิทธิ์แจ้งเตือน: <strong>การตั้งค่า → เพื่อนเตือนเอกสาร → การแจ้งเตือน → เปิด</strong></li>
+        <li>ตรวจสอบว่าไม่ได้เปิด Focus Mode หรือ Do Not Disturb</li>
+        <li>ลองใช้ <strong>"ทดสอบการแจ้งเตือน"</strong> ใน <strong>ตั้งค่า</strong> ของแอป</li>
+        <li>หากยังไม่มา ลองปิด-เปิดแอปใหม่</li>
+      </ol>
+      <p style="font-size:13px; color:var(--text-muted);">หมายเหตุ: การแจ้งเตือนอาจไม่ตรงเวลาเป๊ะในบางเครื่องขึ้นอยู่กับระบบปฏิบัติการ</p>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="search">🔍 ค้นหาและกรอง</div>
+
+  <div class="faq-item">
+    <div class="faq-question">วิธีค้นหาและกรองรายการ?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>แตะไอคอนค้นหาบนหน้าหลัก พิมพ์ชื่อรายการที่ต้องการ แอปจะแสดงผลลัพธ์พร้อมจำนวนรายการ หรือใช้ฟีเจอร์กรองเพื่อดูเฉพาะหมวดหมู่ที่ต้องการ หรือรายการที่ใกล้ครบกำหนด</p>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="export">📤 ส่งออก CSV/PDF</div>
+
+  <div class="faq-item">
+    <div class="faq-question">วิธีส่งออกข้อมูลเป็น CSV หรือ PDF?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>ไปที่หน้าหลักหรือแท็บ <strong>"ส่งออก"</strong></li>
+        <li>เลือกรูปแบบ: <strong>CSV</strong> (Excel/Sheets) หรือ <strong>PDF</strong> (ดูและส่งต่อ)</li>
+        <li>แตะ <strong>"ส่งออก"</strong> — ระบบจะเปิดหน้าต่าง Share ของ iOS</li>
+        <li>เลือกปลายทาง เช่น บันทึกลงเครื่อง ส่ง LINE หรืออีเมล</li>
+      </ol>
+      <div style="background:#fef3c7; border:1px solid #fcd34d; border-radius:8px; padding:12px 16px; margin-top:8px; font-size:14px; color:#92400e;">
+        ⚠️ ไฟล์ที่ส่งออกมีข้อมูลรายการทั้งหมด หากแชร์ให้ผู้อื่น ผู้รับจะเห็นข้อมูลในไฟล์ได้ทั้งหมด
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">ไฟล์ CSV เปิดใน Excel แล้วภาษาไทยแสดงผิด?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ไฟล์ CSV ใส่ UTF-8 BOM ไว้แล้ว หากยังแสดงผิด ให้เปิดแบบนี้:</p>
+      <ol class="step-list">
+        <li>เปิด Excel แล้วไปที่ <strong>Data → From Text/CSV</strong></li>
+        <li>เลือกไฟล์ที่ส่งออก</li>
+        <li>เลือก Encoding เป็น <strong>UTF-8</strong></li>
+        <li>กด <strong>Load</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="data">💾 ข้อมูลและความปลอดภัย</div>
+
+  <div class="faq-item">
+    <div class="faq-question">ถ้าลบแอป ข้อมูลหายไหม? สำรองได้ไหม?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ถ้าลบแอปโดยไม่มี iCloud Backup ข้อมูลจะหายถาวร วิธีสำรอง: เปิด <strong>iCloud Backup</strong> ที่ <strong>การตั้งค่า → ชื่อของคุณ → iCloud → iCloud Backup → เปิดใช้งาน</strong></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">วิธีล้างข้อมูลทั้งหมดในแอป?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ไปที่ <strong>ตั้งค่า → ล้างข้อมูลทั้งหมด</strong> แอปจะแสดง dialog ยืนยันก่อนเสมอ เมื่อยืนยัน ข้อมูลและการแจ้งเตือนทั้งหมดจะถูกลบ แอปจะแสดง empty state บนหน้าหลัก</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">แอปยืนยันข้อมูลเอกสารจริงได้ไหม?<span class="faq-arrow">▾</span></div>
+    <div class="faq-answer">
+      <p>ไม่ได้ครับ/ค่ะ เพื่อนเตือนเอกสารเป็นเพียงแอปบันทึกและเตือนตามข้อมูลที่คุณกรอกเอง ไม่ได้เชื่อมต่อกับระบบราชการ บริษัทประกัน หรือหน่วยงานใดๆ ความถูกต้องของวันครบกำหนดขึ้นอยู่กับข้อมูลที่คุณกรอก</p>
+    </div>
+  </div>
+
+  <div id="contact" style="margin-top:48px;">
+    <div class="contact-card">
+      <h2>📧 ติดต่อผู้พัฒนา</h2>
+      <p>ไม่พบคำตอบที่ต้องการ? ส่งอีเมลหาเราได้เลย เราตอบกลับภายใน 3–5 วันทำการ</p>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <a href="mailto:burapatis@gmail.com?subject=คำถามเกี่ยวกับแอปเพื่อนเตือนเอกสาร"
+           class="btn btn-primary" style="background:#4338ca; display:inline-flex; width:fit-content;">
+          📧 ส่งอีเมลหาเรา
+        </a>
+        <p style="font-size:14px; color:#3730a3; margin:0;">
+          📧 burapatis@gmail.com<br>
+          กรุณาระบุในหัวข้ออีเมลว่า <strong>"เพื่อนเตือนเอกสาร"</strong> และอธิบายปัญหาพร้อมรุ่น iOS
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+  <p style="text-align:center; color:var(--text-muted); font-size:14px;">
+    <a href="./index.html">← กลับหน้าแอปเพื่อนเตือนเอกสาร</a> &nbsp;|&nbsp;
+    <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a> &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a>
+  </p>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <img src="./icon.png" alt="เพื่อนเตือนเอกสาร" style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
+          <span style="color:#fff;font-weight:700;">เพื่อนเตือนเอกสาร</span>
+        </div>
+        <p>📧 <a href="mailto:burapatis@gmail.com">burapatis@gmail.com</a></p>
+        <p style="margin-top:8px;"><a href="../../index.html" style="color:rgba(255,255,255,.55)">← กลับหน้าหลัก</a></p>
+      </div>
+      <div>
+        <h4>เอกสารทางกฎหมาย</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+          <li><a href="./terms.html">ข้อกำหนดการใช้งาน</a></li>
+          <li><a href="./support.html">ความช่วยเหลือ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ผู้พัฒนา</h4>
+        <p>Boorapatis Ploysuwan</p>
+        <ul class="footer-links" style="margin-top:8px;">
+          <li><a href="../../index.html">แอปทั้งหมด</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="./privacy.html" style="color:rgba(255,255,255,.45);font-size:13px;">Privacy Policy</a>
+        <a href="./terms.html"   style="color:rgba(255,255,255,.45);font-size:13px;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('navToggle').addEventListener('click', () =>
+    document.getElementById('navMenu').classList.toggle('open'));
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

@@ -49,6 +49,13 @@ https://<your-username>.github.io/<your-repo-name>/
         ├── terms.html
         ├── icon.png
         └── og-image.png
+    └── pheuan-ekkasan/                 ← แอป "เพื่อนเตือนเอกสาร"
+        ├── index.html
+        ├── privacy.html
+        ├── support.html
+        ├── terms.html
+        ├── icon.png
+        └── og-image.png
 ```
 
 ---
@@ -142,6 +149,9 @@ apps/
 | Privacy Policy (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/privacy.html` |
 | Support URL (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/support.html` |
 | Terms of Service (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/terms.html` |
+| Privacy Policy (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/privacy.html` |
+| Support URL (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/support.html` |
+| Terms of Service (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/terms.html` |
 
 ---
 
