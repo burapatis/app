@@ -4,13 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ความช่วยเหลือ — บัญชีวิถีไทย</title>
-  <meta name="description" content="ความช่วยเหลือและ FAQ สำหรับแอปพลิเคชัน บัญชีวิถีไทย" />
+  <meta name="description" content="คู่มือการใช้งานและ FAQ สำหรับแอปพลิเคชัน บัญชีวิถีไทย บันทึกรายรับ-รายจ่ายสไตล์ไทย" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/style.css" />
   <link rel="icon" href="./icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a5276;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d6eaf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-section-title:first-of-type { margin-top: 0; }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #1a5276;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .guide-tip {
+      background: #ebf5fb;
+      border: 1px solid #aed6f1;
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 12px 0 0;
+      font-size: 14px;
+      color: #1a5276;
+      line-height: 1.8;
+    }
+
+    .guide-warn {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 12px 0 0;
+      font-size: 14px;
+      color: #92400e;
+      line-height: 1.8;
+    }
+
+    .faq-answer ul {
+      margin: 8px 0 0 18px;
+      list-style: disc;
+    }
+
+    .faq-answer li { margin-bottom: 6px; }
+  </style>
 </head>
 <body>
 
@@ -47,8 +126,8 @@
       <span class="breadcrumb-sep">›</span>
       <span>ความช่วยเหลือ</span>
     </div>
-    <h1>ความช่วยเหลือ &amp; FAQ</h1>
-    <p>แอปพลิเคชัน <strong>บัญชีวิถีไทย</strong> | พบคำตอบสำหรับคำถามที่พบบ่อย</p>
+    <h1>ความช่วยเหลือ &amp; คู่มือการใช้งาน</h1>
+    <p>แอปพลิเคชัน <strong>บัญชีวิถีไทย</strong> | คู่มือใช้งานอย่างละเอียดและคำถามที่พบบ่อย</p>
   </div>
 </section>
 
@@ -71,21 +150,406 @@
   </div>
 
 
+  <!-- หัวข้อด่วน -->
+  <div class="legal-toc">
+    <h3>หัวข้อด่วน</h3>
+    <a href="#guide">📖 คู่มือการใช้งาน</a>
+    <a href="#getting-started">🚀 เริ่มต้นใช้งาน</a>
+    <a href="#record">📝 บันทึกรายรับ-รายจ่าย</a>
+    <a href="#categories">🗂️ หมวดหมู่</a>
+    <a href="#reports">📊 สรุปและรายงาน</a>
+    <a href="#edit-delete">✏️ แก้ไขและลบ</a>
+    <a href="#export">📤 ส่งออก CSV</a>
+    <a href="#security">🔒 ความปลอดภัย</a>
+    <a href="#backup">💾 สำรองและย้ายข้อมูล</a>
+    <a href="#faq">🙋 คำถามที่พบบ่อย</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+
+  <!-- ============================================================
+       คู่มือการใช้งาน
+       ============================================================ -->
+  <section id="guide">
+    <h2 style="font-size:1.4rem; margin-bottom:8px; color:var(--text-dark);">
+      📖 คู่มือการใช้งาน
+    </h2>
+    <p style="color:var(--text-muted); font-size:15px; margin-bottom:28px; line-height:1.8;">
+      คู่มือนี้อธิบายขั้นตอนการใช้งานบัญชีวิถีไทยตั้งแต่เริ่มต้น
+      จนถึงการดูรายงาน ส่งออกข้อมูล และตั้งค่าความปลอดภัย
+    </p>
+
+    <div class="guide-tip" style="margin-bottom:28px;">
+      💡 <strong>สรุปสั้นๆ:</strong> บัญชีวิถีไทยเป็นแอปบันทึกรายรับ-รายจ่ายส่วนตัว
+      ข้อมูลเก็บในเครื่อง ไม่ต้องสมัครสมาชิก ใช้งานออฟไลน์ได้ครบทุกฟีเจอร์
+    </div>
+
+
+    <!-- เริ่มต้นใช้งาน -->
+    <div class="faq-section-title" id="getting-started">🚀 เริ่มต้นใช้งาน</div>
+
+    <div class="faq-item open">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        เปิดแอปครั้งแรกต้องทำอะไรบ้าง?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ดาวน์โหลด <strong>บัญชีวิถีไทย</strong> จาก App Store แล้วเปิดแอป</li>
+          <li>อ่านข้อตกลงการใช้งานสั้นๆ (ถ้ามี) แล้วกดยืนยันเพื่อเริ่มใช้งาน</li>
+          <li>คุณจะเห็น <strong>หน้าหลัก</strong> แสดงสรุปยอดรายรับ รายจ่าย และยอดคงเหลือของวัน/เดือน</li>
+          <li>แตะปุ่ม <strong>"+"</strong> หรือ <strong>"เพิ่มรายการ"</strong> เพื่อบันทึกรายการแรกได้ทันที</li>
+        </ol>
+        <p style="margin-top:12px;">ไม่ต้องสมัครสมาชิก ไม่ต้องล็อกอิน และไม่ต้องเชื่อมต่ออินเทอร์เน็ต</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        โครงสร้างหน้าจอหลักของแอปมีอะไรบ้าง?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ul>
+          <li><strong>หน้าหลัก</strong> — ดูสรุปยอดรวม รายการล่าสุด และเข้าถึงการบันทึกได้รวดเร็ว</li>
+          <li><strong>เพิ่มรายการ</strong> — บันทึกรายรับหรือรายจ่ายใหม่</li>
+          <li><strong>รายงาน</strong> — ดูสรุปรายเดือน/รายปี และภาพรวมการเงิน</li>
+          <li><strong>ตั้งค่า</strong> — ล็อกแอป ส่งออก CSV ดูนโยบาย และจัดการข้อมูล</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ต้องต่ออินเทอร์เน็ตไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ไม่จำเป็นครับ บัญชีวิถีไทยใช้งานได้เต็มรูปแบบโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต
+        ทั้งการบันทึก ดูรายงาน ส่งออก CSV และตั้งค่าความปลอดภัย ทำงานในเครื่องของคุณทั้งหมด</p>
+      </div>
+    </div>
+
+
+    <!-- บันทึกรายรับ-รายจ่าย -->
+    <div class="faq-section-title" id="record">📝 บันทึกรายรับ-รายจ่าย</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีเพิ่มรายการรายรับหรือรายจ่ายใหม่
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>จากหน้าหลัก แตะปุ่ม <strong>"+"</strong> หรือ <strong>"เพิ่มรายการ"</strong></li>
+          <li>เลือกประเภท: <strong>รายรับ</strong> (เงินเข้า) หรือ <strong>รายจ่าย</strong> (เงินออก)</li>
+          <li>กรอก <strong>จำนวนเงิน</strong> เป็นตัวเลข เช่น 150 หรือ 1,250.50</li>
+          <li>เลือก <strong>หมวดหมู่</strong> ที่เหมาะสม เช่น ค่าข้าว ค่าเดินทาง เงินเดือน</li>
+          <li>เพิ่ม <strong>หมายเหตุ</strong> ได้ตามต้องการ เช่น "ข้าวเที่ยงตลาด" หรือ "ค่าน้ำมัน"</li>
+          <li>ตรวจสอบวันที่ (แอปจะใช้วันปัจจุบันเป็นค่าเริ่มต้น สามารถเปลี่ยนได้)</li>
+          <li>กด <strong>"บันทึก"</strong> — รายการจะปรากฏในหน้าหลักและรายงานทันที</li>
+        </ol>
+        <div class="guide-tip">
+          💡 <strong>เคล็ดลับ:</strong> บันทึกทุกครั้งที่มีรายรับ-รายจ่ายจริง
+          จะช่วยให้สรุปยอดตรงกับเงินที่เหลืออยู่มากที่สุด
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        บันทึกรายการย้อนหลังได้ไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ได้ครับ เมื่อเพิ่มรายการใหม่ ให้แตะที่ช่อง <strong>วันที่</strong> แล้วเลือกวันที่ต้องการ
+        เหมาะสำหรับกรณีที่ลืมบันทึกเมื่อวานหรือต้องการบันทึกยอดย้อนหลัง</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ใส่ทศนิยมหรือจำนวนเงินจำนวนมากได้ไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ได้ครับ สามารถกรอกจำนวนเงินเป็นทศนิยมได้ (เช่น 45.50 บาท)
+        และรองรับจำนวนเงินตามที่คุณต้องการบันทึก แอปจะคำนวณยอดรวมให้อัตโนมัติ</p>
+      </div>
+    </div>
+
+
+    <!-- หมวดหมู่ -->
+    <div class="faq-section-title" id="categories">🗂️ หมวดหมู่</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        หมวดหมู่ในแอปมีอะไรบ้าง?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>บัญชีวิถีไทยมีหมวดหมู่ที่ออกแบบให้เข้ากับวิถีชีวิตคนไทย เช่น:</p>
+        <ul>
+          <li><strong>รายจ่าย:</strong> ค่าข้าว ค่าเดินทาง ทำบุญ งานสังสรรค์ ค่าน้ำ-ค่าไฟ ค่ารักษาพยาบาล ฯลฯ</li>
+          <li><strong>รายรับ:</strong> เงินเดือน รายได้เสริม ดอกเบี้ย เงินที่ได้รับคืน ฯลฯ</li>
+        </ul>
+        <p style="margin-top:12px;">เลือกหมวดที่ตรงกับรายการมากที่สุด จะช่วยให้ดูรายงานแยกตามประเภทได้ชัดเจน</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        หมายเหตุควรเขียนอะไร?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>หมายเหตุไม่บังคับ แต่แนะนำให้เขียนสั้นๆ เพื่อจำได้ในภายหลัง เช่น:</p>
+        <ul>
+          <li>"ข้าวเช้าตลาดนัด"</li>
+          <li>"ค่าน้ำมันไปโรงพยาบาล"</li>
+          <li>"เงินเดือนเดือนมิ.ย."</li>
+        </ul>
+        <p style="margin-top:12px;">ช่วยให้เวลาดูรายการย้อนหลัง รู้ว่าเงินไปกับอะไรโดยไม่ต้องเดา</p>
+      </div>
+    </div>
+
+
+    <!-- สรุปและรายงาน -->
+    <div class="faq-section-title" id="reports">📊 สรุปและรายงาน</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ดูสรุปยอดบนหน้าหลักอย่างไร?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>หน้าหลักแสดงภาพรวมการเงินของคุณ ได้แก่:</p>
+        <ul>
+          <li><strong>รายรับรวม</strong> — ยอดเงินที่เข้าทั้งหมดในช่วงที่เลือก</li>
+          <li><strong>รายจ่ายรวม</strong> — ยอดเงินที่ออกทั้งหมดในช่วงที่เลือก</li>
+          <li><strong>ยอดคงเหลือ</strong> — รายรับหักรายจ่าย</li>
+          <li><strong>รายการล่าสุด</strong> — รายการที่บันทึกล่าสุดเรียงตามเวลา</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีดูรายงานรายเดือนและรายปี
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ไปที่เมนู <strong>"รายงาน"</strong> จากหน้าหลักหรือแท็บนำทาง</li>
+          <li>เลือกช่วงเวลาที่ต้องการดู เช่น <strong>รายเดือน</strong> หรือ <strong>รายปี</strong></li>
+          <li>เลื่อนดูสรุปยอดรายรับ รายจ่าย และยอดคงเหลือของแต่ละช่วง</li>
+          <li>ดูรายการแยกตามหมวดหมู่เพื่อเข้าใจว่าใช้เงินไปกับอะไรมากที่สุด</li>
+        </ol>
+        <div class="guide-tip">
+          💡 ใช้รายงานรายเดือนช่วยวางแผนงบประมาณครัวเรือน
+          และใช้รายงานรายปีดูภาพรวมทั้งปีได้
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ตัวเลขในรายงานคำนวณอย่างไร?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>แอปรวมยอดจากรายการที่คุณบันทึกไว้เท่านั้น ไม่มีการดึงข้อมูลจากธนาคารหรือแหล่งภายนอก
+        <strong>ยอดคงเหลือ = รายรับรวม − รายจ่ายรวม</strong> ในช่วงเวลาที่เลือก</p>
+      </div>
+    </div>
+
+
+    <!-- แก้ไขและลบ -->
+    <div class="faq-section-title" id="edit-delete">✏️ แก้ไขและลบรายการ</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีแก้ไขรายการที่บันทึกไปแล้ว
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ไปที่รายการที่ต้องการแก้ไขจาก <strong>หน้าหลัก</strong> หรือ <strong>รายงาน</strong></li>
+          <li>แตะที่รายการเพื่อเปิดรายละเอียด</li>
+          <li>แตะปุ่ม <strong>"แก้ไข"</strong></li>
+          <li>เปลี่ยนจำนวนเงิน หมวดหมู่ วันที่ หรือหมายเหตุตามต้องการ</li>
+          <li>กด <strong>"บันทึก"</strong> — ยอดสรุปจะอัปเดตให้อัตโนมัติ</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีลบรายการ
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>เปิดรายการที่ต้องการลบ</li>
+          <li>แตะปุ่ม <strong>"ลบ"</strong> หรือ <strong>"ลบรายการ"</strong></li>
+          <li>ยืนยันการลบเมื่อแอปถาม — รายการจะถูกลบถาวรจากเครื่อง</li>
+        </ol>
+        <div class="guide-warn">
+          ⚠️ การลบรายการไม่สามารถย้อนกลับได้ หากลบผิด ต้องเพิ่มรายการใหม่ด้วยตนเอง
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ส่งออก CSV -->
+    <div class="faq-section-title" id="export">📤 ส่งออก CSV</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีส่งออกข้อมูลเป็นไฟล์ CSV
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ไปที่เมนู <strong>"ตั้งค่า"</strong></li>
+          <li>แตะ <strong>"ส่งออก CSV"</strong> หรือ <strong>"Export CSV"</strong></li>
+          <li>เลือกช่วงข้อมูลที่ต้องการส่งออก (ถ้ามีตัวเลือก)</li>
+          <li>แอปจะสร้างไฟล์และเปิดหน้าต่าง <strong>Share</strong> ของ iOS</li>
+          <li>เลือกปลายทาง เช่น บันทึกลง <strong>Files</strong> ส่งอีเมล หรือ AirDrop</li>
+        </ol>
+        <div class="guide-tip">
+          💡 แนะนำให้ส่งออก CSV เป็นระยะเพื่อเก็บสำรองข้อมูล
+          หรือก่อนเปลี่ยนเครื่อง / ถอนการติดตั้งแอป
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        เปิดไฟล์ CSV ใน Excel แล้วภาษาไทยแสดงผิด?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ไฟล์ CSV จากแอปใส่ <strong>UTF-8 BOM</strong> ไว้แล้วเพื่อรองรับภาษาไทย
+        หากยังแสดงผิดใน Excel ให้เปิดแบบนี้:</p>
+        <ol class="step-list">
+          <li>เปิด Excel แล้วไปที่ <strong>Data → From Text/CSV</strong></li>
+          <li>เลือกไฟล์ที่ส่งออกจากแอป</li>
+          <li>ตั้งค่า Encoding เป็น <strong>UTF-8</strong></li>
+          <li>กด <strong>Load</strong> เพื่อนำเข้าข้อมูล</li>
+        </ol>
+      </div>
+    </div>
+
+
+    <!-- ความปลอดภัย -->
+    <div class="faq-section-title" id="security">🔒 ความปลอดภัย</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีเปิดล็อกแอปด้วย Face ID / Touch ID
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ไปที่เมนู <strong>"ตั้งค่า"</strong></li>
+          <li>เปิดสวิตช์ <strong>"ล็อกแอป"</strong> หรือ <strong>"Face ID / Touch ID"</strong></li>
+          <li>ครั้งแรก ระบบจะขอสิทธิ์ใช้ Face ID หรือ Touch ID — กด <strong>"อนุญาต"</strong></li>
+          <li>ครั้งถัดไปที่เปิดแอป จะต้องยืนยันตัวตนก่อนเข้าใช้งาน</li>
+        </ol>
+        <p style="margin-top:12px;">ฟีเจอร์นี้ไม่บังคับ แต่แนะนำหากมีข้อมูลการเงินที่ต้องการความเป็นส่วนตัว</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ข้อมูลของฉันเก็บอยู่ที่ไหน?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ข้อมูลทั้งหมด — รายรับ รายจ่าย หมวดหมู่ และหมายเหตุ —
+        เก็บอยู่ในเครื่อง iPhone/iPad ของคุณเท่านั้น
+        ไม่มีการอัปโหลดไปยังเซิร์ฟเวอร์ Cloud ของผู้พัฒนา
+        และไม่มีการส่งข้อมูลออกทางอินเทอร์เน็ต</p>
+        <p style="margin-top:12px;">
+          อ่านเพิ่มเติมได้ที่
+          <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- สำรองและย้ายข้อมูล -->
+    <div class="faq-section-title" id="backup">💾 สำรองและย้ายข้อมูล</div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีสำรองข้อมูลก่อนเปลี่ยนเครื่อง
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>มี 2 วิธีหลักที่แนะนำ:</p>
+        <p style="margin-top:12px;"><strong>วิธีที่ 1 — ส่งออก CSV (แนะนำ):</strong></p>
+        <ol class="step-list">
+          <li>ไปที่ <strong>ตั้งค่า → ส่งออก CSV</strong></li>
+          <li>บันทึกไฟล์ไว้ใน Files, iCloud Drive หรือส่งอีเมลเก็บไว้</li>
+          <li>เมื่อติดตั้งแอปบนเครื่องใหม่ สามารถอ้างอิงข้อมูลจากไฟล์ได้</li>
+        </ol>
+        <p style="margin-top:12px;"><strong>วิธีที่ 2 — iCloud Backup:</strong></p>
+        <ol class="step-list">
+          <li>เปิด <strong>การตั้งค่า → [ชื่อของคุณ] → iCloud → iCloud Backup</strong></li>
+          <li>เปิดใช้งานและกด <strong>"Back Up Now"</strong></li>
+          <li>เมื่อตั้งค่าเครื่องใหม่จาก backup ข้อมูลแอปจะถูกกู้คืนพร้อมกัน</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        ถ้าลบแอป ข้อมูลจะหายไหม?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>ใช่ครับ หากลบแอปโดยไม่ได้สำรองข้อมูลไว้ รายการทั้งหมดจะหายไปจากเครื่อง
+        แนะนำให้ส่งออก CSV หรือใช้ iCloud Backup ก่อนลบแอปเสมอ</p>
+        <div class="guide-warn">
+          ⚠️ ผู้พัฒนาไม่สามารถกู้คืนข้อมูลให้ได้ เนื่องจากไม่มีสำเนาข้อมูลบนเซิร์ฟเวอร์
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        วิธีล้างข้อมูลทั้งหมดในแอป
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <ol class="step-list">
+          <li>ส่งออก CSV ก่อน (หากต้องการเก็บสำรอง)</li>
+          <li>ไปที่ <strong>ตั้งค่า</strong></li>
+          <li>แตะ <strong>"ล้างข้อมูลทั้งหมด"</strong> (ถ้ามีตัวเลือกนี้)</li>
+          <li>ยืนยันการล้าง — รายการทั้งหมดจะถูกลบจากเครื่อง</li>
+        </ol>
+        <p style="margin-top:12px;">หรือถอนการติดตั้งแอปแล้วติดตั้งใหม่ก็เทียบเท่าการล้างข้อมูล</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <hr class="divider" />
+
+
   <!-- ============================================================
        FAQ Section
-       ✏️ [แก้ไข] เพิ่ม/แก้ไข FAQ ได้ที่นี่
-       วิธีเพิ่ม FAQ ใหม่:
-       1. คัดลอก block <div class="faq-item"> ... </div> ทั้งหมด
-       2. วางต่อท้าย FAQ ตัวสุดท้าย
-       3. แก้ไขคำถามใน .faq-question และคำตอบใน .faq-answer
        ============================================================ -->
-  <section>
+  <section id="faq">
     <h2 style="font-size:1.3rem; margin-bottom:20px; color:var(--text-dark);">
       🙋 คำถามที่พบบ่อย (FAQ)
     </h2>
 
     <!-- FAQ 1 -->
-    <div class="faq-item open">
+    <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)">
         <!-- ✏️ [แก้ไข] คำถาม -->
         ข้อมูลของฉันปลอดภัยไหม? จะถูกส่งไปที่ไหนบ้าง?
@@ -202,11 +666,20 @@
 
   <hr class="divider" />
 
+  <p style="text-align:center; color:var(--text-muted); font-size:14px; margin-bottom:32px;">
+    <a href="#guide">↑ กลับไปคู่มือการใช้งาน</a>
+    &nbsp;|&nbsp;
+    <a href="./index.html">หน้าแอป</a>
+    &nbsp;|&nbsp;
+    <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a>
+    &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a>
+  </p>
 
   <!-- ============================================================
        Contact Form Section
        ============================================================ -->
-  <section>
+  <section id="contact">
     <h2 style="font-size:1.3rem; margin-bottom:8px; color:var(--text-dark);">📬 ติดต่อเรา</h2>
     <p style="color:var(--text-muted); margin-bottom:24px;">
       หากไม่พบคำตอบในส่วน FAQ หรือต้องการความช่วยเหลือเพิ่มเติม
