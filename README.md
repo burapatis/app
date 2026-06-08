@@ -146,12 +146,14 @@ apps/
 | Privacy Policy (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/privacy.html` |
 | Support URL (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/support.html` |
 | Terms of Service (วันดีๆ) | `https://<user>.github.io/<repo>/apps/wandee/terms.html` |
+| App Store (วันดีๆ) | `https://apps.apple.com/th/app/id6777304179` |
 | Privacy Policy (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/privacy.html` |
 | Support URL (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/support.html` |
 | Terms of Service (เพื่อนเตือนยา) | `https://<user>.github.io/<repo>/apps/pheuan-tueanya/terms.html` |
 | Privacy Policy (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/privacy.html` |
 | Support URL (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/support.html` |
 | Terms of Service (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/terms.html` |
+| App Store (เพื่อนเตือนเอกสาร) | `https://apps.apple.com/th/app/id6777645901` |
 
 ---
 
