@@ -153,6 +153,8 @@ apps/
 | Privacy Policy (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/privacy.html` |
 | Support URL (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/support.html` |
 | Terms of Service (เพื่อนเตือนเอกสาร) | `https://<user>.github.io/<repo>/apps/pheuan-ekkasan/terms.html` |
+| App Store (ขายดี) | `https://apps.apple.com/th/app/id6775516917` |
+| App Store (เพื่อนเตือนยา) | `https://apps.apple.com/th/app/id6777451083` |
 | App Store (เพื่อนเตือนเอกสาร) | `https://apps.apple.com/th/app/id6777645901` |
 
 ---
