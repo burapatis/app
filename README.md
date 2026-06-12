@@ -56,6 +56,14 @@ https://<your-username>.github.io/<your-repo-name>/
         ├── terms.html
         ├── icon.png
         └── og-image.png
+    └── greeting_card/                  ← แอป "ส่งใจ"
+        ├── index.html
+        ├── privacy.html
+        ├── support.html
+        ├── terms.html
+        ├── icon.png
+        ├── og-image.png
+        └── screenshots/
 ```
 
 ---
@@ -156,6 +164,9 @@ apps/
 | App Store (ขายดี) | `https://apps.apple.com/th/app/id6775516917` |
 | App Store (เพื่อนเตือนยา) | `https://apps.apple.com/th/app/id6777451083` |
 | App Store (เพื่อนเตือนเอกสาร) | `https://apps.apple.com/th/app/id6777645901` |
+| Privacy Policy (ส่งใจ) | `https://<user>.github.io/<repo>/apps/greeting_card/privacy.html` |
+| Support URL (ส่งใจ) | `https://<user>.github.io/<repo>/apps/greeting_card/support.html` |
+| Terms of Service (ส่งใจ) | `https://<user>.github.io/<repo>/apps/greeting_card/terms.html` |
 
 ---
 

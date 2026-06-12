@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ความช่วยเหลือ — ส่งใจ</title>
+  <meta name="description" content="คำถามที่พบบ่อยและวิธีใช้งานแอปส่งใจ แอปสร้างการ์ดอวยพรสำหรับผู้สูงวัย" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <style>
+    .faq-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2E7D6F;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ccfbf1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+      border: 1px solid #99f6e4;
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .contact-card h2 { color: #0f766e; margin-bottom: 8px; }
+    .contact-card p { color: #134e4a; margin-bottom: 24px; }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.8;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #2E7D6F;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./icon.png" alt="ส่งใจ" class="brand-icon" />
+        <div class="brand-text">
+          <span class="brand-name">ส่งใจ</span>
+          <span class="brand-sub">← กลับหน้าหลักแอป</span>
+        </div>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="./index.html">หน้าแรก</a>
+        <a href="./privacy.html">นโยบาย</a>
+        <a href="./terms.html">ข้อกำหนด</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เมนู"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="legal-hero" style="background: linear-gradient(135deg, #1B5E50, #2E7D6F);">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="./index.html">ส่งใจ</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>ความช่วยเหลือ</span>
+    </div>
+    <h1>💬 ความช่วยเหลือ</h1>
+    <p>คำถามที่พบบ่อยและวิธีใช้งานแอปส่งใจ</p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <div class="legal-toc">
+    <h3>หัวข้อด่วน</h3>
+    <a href="#getting-started">🚀 เริ่มต้นใช้งาน</a>
+    <a href="#create-card">💌 สร้างการ์ดอวยพร</a>
+    <a href="#occasions">🌸 วาระและอารมณ์</a>
+    <a href="#share">📤 ส่งต่อการ์ด</a>
+    <a href="#settings">⚙️ การตั้งค่า</a>
+    <a href="#data">🔒 ข้อมูลและความปลอดภัย</a>
+    <a href="#contact">📧 ติดต่อเรา</a>
+  </div>
+
+  <div class="faq-section-title" id="getting-started">🚀 เริ่มต้นใช้งาน</div>
+
+  <div class="faq-item open">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      วิธีเปิดแอปครั้งแรกต้องทำอะไรบ้าง?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>เปิดแอปส่งใจ (เมื่อวางขายบน App Store แล้ว)</li>
+        <li>อ่านและยอมรับข้อตกลงการใช้งาน</li>
+        <li>ดูคู่มือการใช้งาน 5 ขั้นตอน (แสดงครั้งแรกเท่านั้น)</li>
+        <li>เลือกคำลงท้ายข้อความ ค่ะ หรือ ครับ</li>
+        <li>กดปุ่ม "สร้างการ์ดอวยพร" ที่หน้าหลักเพื่อเริ่มได้เลย</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ต้องต่ออินเทอร์เน็ตไหมเพื่อใช้งาน?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ไม่จำเป็นครับ/ค่ะ แอปส่งใจทำงานบนเครื่อง 100% ใช้งานได้เต็มรูปแบบโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต
+      ไม่ต้องสมัครสมาชิก ไม่ต้องล็อกอิน
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      แอปใช้งานฟรีหรือมีค่าใช้จ่าย?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      แอปส่งใจดาวน์โหลดและใช้งานได้ฟรี ไม่มีโฆษณา ไม่มีค่าสมัครสมาชิก ไม่มีค่าธรรมเนียมรายเดือน
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="create-card">💌 สร้างการ์ดอวยพร</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      สร้างการ์ดอวยพรทำอย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ol class="step-list">
+        <li>กดปุ่ม <strong>"สร้างการ์ดอวยพร"</strong> ที่หน้าหลัก</li>
+        <li><strong>เลือกวาระ</strong> — เช่น อวยพรตอนเช้า วันเกิด หรือเทศกาลไทย</li>
+        <li><strong>เลือกอารมณ์</strong> — เช่น อบอุ่น สุภาพ หรือให้กำลังใจ</li>
+        <li><strong>เลือกภาพพื้นหลัง</strong> — ระบบจะจัดวางข้อความให้อัตโนมัติ</li>
+        <li>ดูตัวอย่างการ์ด แล้วกด <strong>ส่งต่อ</strong> ให้คนที่คุณรัก</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ต้องพิมพ์ข้อความเองไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ไม่ต้องครับ/ค่ะ แอปมีข้อความอวยพรสำเร็จรูป 333 ข้อความ
+      ระบบจะสุ่มข้อความที่เหมาะกับวาระและอารมณ์ที่คุณเลือก แล้วเติมคำลงท้าย ค่ะ/ครับ ให้อัตโนมัติ
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="occasions">🌸 วาระและอารมณ์</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      มีวาระ (โอกาส) อะไรบ้าง?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li><strong>อวยพรตอนเช้า</strong> — ส่งความหวังดีตอนเริ่มวันใหม่</li>
+        <li><strong>วันเกิด</strong> — อวยพรวันคล้ายวันเกิด</li>
+        <li><strong>แสดงความยินดี</strong> — ร่วมยินดีในทุกโอกาสพิเศษ</li>
+        <li><strong>แสดงความเสียใจ</strong> — แบ่งปันความห่วงใยในยามเศร้า</li>
+        <li><strong>อวยพรทั่วไป</strong> — ส่งความหวังดีในทุกวัน</li>
+        <li><strong>เทศกาลไทย</strong> — อวยพรในเทศกาลสำคัญของไทย</li>
+        <li><strong>ให้กำลังใจ</strong> — เชียร์และให้กำลังใจคนที่คุณห่วงใย</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      อารมณ์ (โทนข้อความ) มีอะไรบ้าง?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      มี 6 โทน: อบอุ่น สุภาพ สนุกสนาน สงบ ให้กำลังใจ และให้เกียรติ
+      ระบบจะแสดงเฉพาะโทนที่เหมาะกับวาระที่คุณเลือก เช่น แสดงความเสียใจจะมีโทน ให้เกียรติ สงบ และให้กำลังใจ
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="share">📤 ส่งต่อการ์ด</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ส่งการ์ดให้คนอื่นได้อย่างไร?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ที่หน้าตัวอย่างการ์ด กดปุ่ม <strong>ส่งต่อ</strong> แล้วเลือกแอปที่ต้องการ เช่น Line, Messenger หรืออีเมล
+      ระบบจะเปิด Share sheet ของ iOS ให้คุณเลือกช่องทางส่งได้เอง
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      บันทึกการ์ดลงคลังภาพได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ฟีเจอร์บันทึกการ์ดลงคลังภาพจะพร้อมใช้งานใน<strong>เวอร์ชันถัดไป</strong>
+      เวอร์ชัน 1.0 ปัจจุบันรองรับการส่งต่อการ์ดผ่าน Share sheet ได้
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="settings">⚙️ การตั้งค่า</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      เปลี่ยนคำลงท้าย ค่ะ/ครับ ได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ได้ครับ/ค่ะ ไปที่ <strong>ตั้งค่า → คำลงท้ายข้อความ</strong> แล้วเลือก ค่ะ หรือ ครับ
+      การตั้งค่านี้จะใช้กับข้อความอวยพรทุกการ์ดที่สร้าง
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ดูคู่มือการใช้งานอีกครั้งได้ไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ได้ครับ/ค่ะ ไปที่ <strong>ตั้งค่า → ดูวิธีใช้งาน</strong> เพื่อเปิดคู่มือ 5 ขั้นตอนอีกครั้ง
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="data">🔒 ข้อมูลและความปลอดภัย</div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ข้อมูลของฉันปลอดภัยไหม?
+      <span class="faq-arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      ปลอดภัยครับ/ค่ะ แอปส่งใจไม่เก็บข้อมูลส่วนตัว ไม่ส่งข้อมูลออกอินเทอร์เน็ต และไม่มีโฆษณา
+      การตั้งค่าเก็บในเครื่องเท่านั้น ดูรายละเอียดใน <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a>
+    </div>
+  </div>
+
+  <div class="faq-section-title" id="contact">📧 ติดต่อเรา</div>
+
+  <div class="contact-card">
+    <h2>ยังมีคำถาม?</h2>
+    <p>หากพบปัญหาการใช้งานหรือมีข้อเสนอแนะ ติดต่อเราได้ทางอีเมล</p>
+    <p style="margin-bottom:0;">
+      📧 <a href="mailto:burapatis@gmail.com?subject=คำถามเกี่ยวกับแอปส่งใจ" style="font-weight:600; color:#0f766e;">burapatis@gmail.com</a>
+    </p>
+    <p style="font-size:13px; margin-top:12px; margin-bottom:0;">
+      กรุณาระบุในหัวข้ออีเมลว่า <strong>"ส่งใจ"</strong> และอธิบายปัญหาพร้อมรุ่น iOS ของคุณ
+    </p>
+  </div>
+
+  <p style="margin-top:32px;">
+    <a href="./index.html">← กลับหน้าแอปส่งใจ</a> &nbsp;|&nbsp;
+    <a href="./privacy.html">นโยบายความเป็นส่วนตัว</a> &nbsp;|&nbsp;
+    <a href="./terms.html">ข้อกำหนดการใช้งาน</a>
+  </p>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Boorapatis Ploysuwan. สงวนลิขสิทธิ์.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
