@@ -3,9 +3,14 @@
 
   /** วันเปิดเว็บไซต์ Boorapatis Apps (commit แรกที่มีหน้า developer site) */
   const SITE_LAUNCH_DATE = '2026-06-05';
-  const VISITOR_PAGE_ID = 'burapatis.github.io/app';
-  const VISITOR_BADGE_URL =
-    'https://visitor-badge.laobi.icu/badge?page_id=' + encodeURIComponent(VISITOR_PAGE_ID);
+
+  /**
+   * Page Views API — รองรับ CORS จาก GitHub Pages ได้จริง
+   * https://page-views-api.ratneshc.com/docs/getting-started
+   */
+  const PAGE_VIEWS_API = 'https://page-views-api.ratneshc.com/api/v1';
+  const PAGE_VIEWS_SITE = 'burapatis.github.io';
+  const PAGE_VIEWS_PATH = '/app/';
 
   function formatNumber(n) {
     return Number(n).toLocaleString('th-TH');
@@ -26,21 +31,30 @@
     el.textContent = formatNumber(liveApps.length);
   }
 
-  function parseVisitorCount(svg) {
-    const match = svg.match(/x="571[^"]*" y="140">(\d[\d,]*)<\/text>/);
-    if (!match) return null;
-    const n = parseInt(match[1].replace(/,/g, ''), 10);
-    return Number.isFinite(n) ? n : null;
+  function buildPageViewsUrl(endpoint) {
+    const params = new URLSearchParams({
+      site: PAGE_VIEWS_SITE,
+      path: PAGE_VIEWS_PATH,
+    });
+    return PAGE_VIEWS_API + '/' + endpoint + '?' + params.toString();
+  }
+
+  function trackPageView() {
+    return fetch(buildPageViewsUrl('track'), { keepalive: true }).catch(function () {});
   }
 
   function updateVisitorCount() {
     const el = document.getElementById('stat-visitors');
     if (!el) return;
-    fetch(VISITOR_BADGE_URL, { cache: 'no-store' })
-      .then(function (r) { return r.text(); })
-      .then(function (svg) {
-        const count = parseVisitorCount(svg);
-        el.textContent = count !== null ? formatNumber(count) : '—';
+
+    fetch(buildPageViewsUrl('views'))
+      .then(function (r) {
+        if (!r.ok) throw new Error('views request failed');
+        return r.json();
+      })
+      .then(function (data) {
+        const views = Number(data && data.views);
+        el.textContent = Number.isFinite(views) ? formatNumber(views) : '—';
       })
       .catch(function () {
         el.textContent = '—';
@@ -50,7 +64,7 @@
   function initSiteStats() {
     updateDaysOnline();
     updateAppCount();
-    updateVisitorCount();
+    trackPageView().finally(updateVisitorCount);
     setInterval(updateVisitorCount, 5 * 60 * 1000);
     setInterval(updateDaysOnline, 60 * 60 * 1000);
   }
